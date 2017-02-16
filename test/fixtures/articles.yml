@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  body: MyText
+  image: MyString
+  price: 1
+  from_date: 2017-02-14 06:37:31
+  to_date: 2017-02-14 06:37:31
+  country: MyString
+  region: MyString
+  safety_info: MyText
+  travel_item: MyText
+  user_id: 1
+
+two:
+  body: MyText
+  image: MyString
+  price: 1
+  from_date: 2017-02-14 06:37:31
+  to_date: 2017-02-14 06:37:31
+  country: MyString
+  region: MyString
+  safety_info: MyText
+  travel_item: MyText
+  user_id: 1
