@@ -18,6 +18,20 @@ class ArticlesController < ApplicationController
 		@article.destroy
 		redirect_to articles_path
 	end
+    
+    def show
+    	@article = Article.find(params[:id])
+    end
+
+    def edit
+    	@article = Article.find(params[:id])
+    end
+
+    def update
+    	@article = Article.find(params[:id])
+    	@article.update(set_params)
+    	redirect_to articles_path(@article.id)
+    end
 
 
 	private
