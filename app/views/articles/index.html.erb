@@ -7,7 +7,6 @@
 			<%= image_tag article.image.url, class: "img"%>
 			<% end %>
 		</div>
-		<p><%= link_to "Destroy", article_path(article), method: :delete %></p>
 		<p><%= link_to "さらに表示", article_path(article.id) %></p> 
 	</div>
 	<% end %>
