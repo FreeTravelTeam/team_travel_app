@@ -10,9 +10,13 @@
 
   <body>
   <header id="header" class="main-head">
-  	<h1>Free Team Travel App</h1>
-  	<span><%= link_to "Travels", articles_path %></span>
-  	<span><%= link_to "Create Travel", new_article_path %></span>
+  	<h1 class="app-name">Free Team Travel App</h1>
+
+    <ul class="navigation">
+      <li class="head-nav"><%= link_to "Travels", articles_path %></li>
+      <li class="head-nav"><%= link_to "Create Travel", new_article_path %></li>
+    </ul>
+
   </header><!-- /header -->
     <%= yield %>
   </body>

@@ -14,38 +14,4 @@
  *= require_self
  */
 
- /*toppage*/
- .parallax-window {
-    min-height: 400px;
-    background: transparent;
-}
-.top-sec{
-	height: 250px;
-}
 
-
-/*article index action*/
-.iamges-sec{
-	width: 50%;
-	margin: 0 auto;
-	display: flex;
-}
-.index-images{
-	width: 33.3333%;
-}
-.index-image{
-	width: 60%;
-	margin: auto;
-}
-.index-image .img{
-	display: inline-block;
-	width: 100%;
-	height: 100%;
-}
-
-/*article new action*/
-
-/*articles show action*/
-.show-sec{
-	text-align: center;
-}
