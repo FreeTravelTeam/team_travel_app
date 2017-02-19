@@ -26,6 +26,7 @@ gem 'rmagick'
 
 gem 'devise'
 
+gem "test"
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
