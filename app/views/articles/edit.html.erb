@@ -1,4 +1,7 @@
 <div class="edit-sec">
 <h1>編集</h1>
-<%= render'form' %>
+
+  <div class="render_form"><%= render'form' %></div>
+  <p><%= link_to "Destroy", article_path(@article.id), method: :delete, "data-confirm" => "本当に削除しますか？" %></p>
+
 </div>
