@@ -22,4 +22,5 @@ two:
   region: MyString
   safety_info: MyText
   travel_item: MyText
+
   user_id: 1
