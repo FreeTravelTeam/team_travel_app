@@ -2,6 +2,7 @@
 
 one:
 <<<<<<< HEAD
+<<<<<<< HEAD
   image: MyString
   body: MyText
   price: 1
@@ -24,6 +25,8 @@ two:
   safety_info: MyString
   travel_item: MyString
 =======
+=======
+>>>>>>> 01ec974cbebfc94bcdfc783aa6d3b2b4fc2775e2
   body: MyText
   image: MyString
   price: 1
@@ -45,5 +48,9 @@ two:
   region: MyString
   safety_info: MyText
   travel_item: MyText
+<<<<<<< HEAD
 >>>>>>> 4024a8a4652e15fd80e3b95d93108646329bafcc
+=======
+
+>>>>>>> 01ec974cbebfc94bcdfc783aa6d3b2b4fc2775e2
   user_id: 1
