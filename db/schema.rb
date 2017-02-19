@@ -10,7 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 20170218064540) do
 
   create_table "articles", force: :cascade do |t|
@@ -23,7 +22,6 @@ ActiveRecord::Schema.define(version: 20170218064540) do
     t.string   "region"
     t.text     "safety_info"
     t.text     "travel_item"
-    
     t.integer  "user_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
