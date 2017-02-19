@@ -1,0 +1,26 @@
+<div class="show-sec">
+<div class="show-img">
+<%= image_tag @article.image %>
+</div>
+
+<h2>body</h2>
+<p><%= @article.body %></p>
+
+<h2>出発日</h2>
+<p><%= @article.from_date %></p>
+
+<h2>Country</h2>
+<p><%= @article.country %></p>
+
+<h2>Reigon</h2>
+<p><%= @article.region %></p>
+
+<h2>Safety into</h2>
+<p><%= @article.safety_info %></p>
+
+<h2>Travel item</h2>
+<p><%= @article.travel_item %></p>
+
+<%= link_to "Edit", edit_article_path(@article.id) %>
+
+</div>

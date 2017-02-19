@@ -14,6 +14,7 @@
  *= require_self
  */
 
+
 /*article index action*/
 .iamges-sec{
 	width: 50%;
@@ -34,3 +35,8 @@
 }
 
 /*article new action*/
+
+/*articles show action*/
+.show-sec{
+	text-align: center;
+}
