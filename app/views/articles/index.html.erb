@@ -1,4 +1,34 @@
 
+
+<!-- 検索フォーム -->
+<div class="form_group">
+  <%= search_form_for @search do |f| %>
+    <p class="search-form">
+      <%= f.label :country_eq, "タイトル検索" %>
+      <%= f.text_field :country_eq, class: "form-control", placeholder: "国名" %>
+    </p>
+
+    <p class="search-form">
+    	<%= f.label :region_cont, "地域で検索" %>
+    	<%= f.text_field :region_cont, class: "form-control", placeholder: "地域名" %>
+    </p>
+
+    <p class="search-form">
+      <%= f.label :price, "予算で検索" %>
+      <%= f.text_field :price_lt, class: "form-control", placeholder: "¥" %>
+    </p>
+
+    <p class="search-btn">
+    	<%= f.submit '検索', class: "btn btn-primary" %>
+		<%= link_to 'クリア', url_for, class: "btn btn-default" %>
+    </p>
+	
+
+  <% end %>
+</div>
+
+
+<!-- 一覧セクション -->
 <section class="iamges-sec">
 	<% @articles.each do |article| %>
 	<div class="index-iamges">

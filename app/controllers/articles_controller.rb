@@ -5,6 +5,9 @@ class ArticlesController < ApplicationController
 
 	def index
 		@articles = Article.all
+		@search = Article.ransack(params[:q])
+		@articles = @search.result(distinct: true)
+
 	end
 
 	def new
