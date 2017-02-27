@@ -26,6 +26,8 @@ gem 'rmagick'
 
 gem 'devise'
 
+gem 'ransack'
+
 gem 'hirb'
 
 
