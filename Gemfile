@@ -26,6 +26,12 @@ gem 'rmagick'
 
 gem 'devise'
 
+gem 'ransack'
+
+gem 'social-share-button'
+
+gem 'hirb'
+
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

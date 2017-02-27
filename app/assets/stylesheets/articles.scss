@@ -2,4 +2,32 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-//articlesコントローラ　index
+
+//共通ヘッダー
+
+.head-nav-bar{
+
+	.head-nav{
+		display: flex;
+		width: 40%;
+		margin-left: auto;
+
+		li{
+			width: 100%;
+			list-style: none;
+			text-align: center;
+		}
+			a{
+				text-decoration: none;
+			}
+	}
+}
+
+//topページ
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
+}
+.top-sec{
+	height: 250px;
+}
