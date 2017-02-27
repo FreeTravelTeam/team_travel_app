@@ -11,8 +11,22 @@
   <body>
   <header id="header" class="main-head">
   	<h1>Free Team Travel App</h1>
-  	<span><%= link_to "Travels", articles_path %></span>
-  	<span><%= link_to "Create Travel", new_article_path %></span>
+
+    <nav class="head-nav-bar">
+      <ul class="head-nav">
+          <li><%= link_to "TOP", root_path %></li>
+          <li><%=  %></li> 
+        <% if user_signed_in? %>
+        	<li><%= link_to "Travels", articles_path %></li>
+        	<li><%= link_to "Create Travel", new_article_path %></li>
+        <% else %>
+          <li><%= link_to "Travels", articles_path %></li>
+          <li><%= link_to "Sign Up", new_user_registration_path %></li>
+          <li><%= link_to "Sign In", new_user_session_path %></li>
+      <% end %>
+      </ul>
+    </nav>
+
   </header><!-- /header -->
     <%= yield %>
   </body>
