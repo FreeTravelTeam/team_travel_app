@@ -28,6 +28,8 @@ gem 'devise'
 
 gem 'ransack'
 
+gem 'social-share-button'
+
 gem 'hirb'
 
 
