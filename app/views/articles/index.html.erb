@@ -34,7 +34,7 @@
 	<div class="index-iamges">
 		<div class="index-image">
 		    <%= link_to article_path(article.id) do %>
-			<%= image_tag article.image.url, class: "img"%>
+			<%= image_tag article.image, class: "img"%>
 			<% end %>
 		</div>
 		<p><%= link_to "さらに表示", article_path(article.id) %></p> 
