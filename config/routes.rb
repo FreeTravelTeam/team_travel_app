@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :articles
   
   get '/users/:id' => 'users#show', as: 'user'
+  get '/articles' => 'articles#index'
 end
