@@ -4,5 +4,7 @@ Rails.application.routes.draw do
   resources :articles
   
   get '/users/:id' => 'users#show', as: 'user'
-  get '/articles' => 'articles#index'
+  root 'articles#top'
+  get '/users' => "users#index"
+  
 end

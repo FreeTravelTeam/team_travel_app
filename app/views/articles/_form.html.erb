@@ -1,0 +1,71 @@
+
+<%= form_for @article do |f| %>
+　<p>
+          <%= f.label :body %>
+	      <%= f.text_area :body %>
+	　　</p>
+　　　	<p>
+		  <%= f.label :image %>
+		  <%= f.file_field :image %>
+	　　</p>
+　
+	<p><%= f.label :from_date, '出発日' %>
+     <%= raw sprintf(
+      f.datetime_select(
+         :from_date,# プロパティ名
+        {
+          start_year:     Time.zone.now.prev_year.year,# 選択可能な開始年
+          end_year:       Time.zone.now.next_year.year,# 選択可能な終了年
+          default:        Time.zone.now,# デフォルトの年
+          use_two_digit_numbers: true,# 月日を2桁の値で表示
+          date_separator: '%s',# 年, 月
+          datetime_separator: '%s',# 日
+          #time_separator: '%s'# 時
+        },# オプション
+        { class: 'date-select' }# htmlオプションを指定する場合は別で指定
+      ),
+      '年 ', '月 ', '日 ') #'時 ') + '分'# 分 は最後につけ加えられる
+     %>
+  	</p>
+
+  	<p><%= f.label :to_date, '帰宅日' %>
+     <%= raw sprintf(
+      f.datetime_select(
+         :to_date,# プロパティ名
+        {
+          start_year:     Time.zone.now.prev_year.year,# 選択可能な開始年
+          end_year:       Time.zone.now.next_year.year,# 選択可能な終了年
+          default:        Time.zone.now,# デフォルトの年
+          use_two_digit_numbers: true,# 月日を2桁の値で表示
+          date_separator: '%s',# 年, 月
+          datetime_separator: '%s',# 日
+          #time_separator: '%s'# 時
+        },# オプション
+        { class: 'date-select' }# htmlオプションを指定する場合は別で指定
+      ),
+      '年 ', '月 ', '日 ' )#'時 ')# + '分'# 分 は最後につけ加えられる
+     %>
+  	</p>
+
+		<p>
+			<%= f.label :country %>
+			<%= f.text_field :country %>
+		</p>
+		<p>
+			<%= f.label :reion %>
+			<%= f.text_field :region %>
+		</p>
+		<p>
+			<%= f.label :safety_info %>
+			<%= f.text_field :safety_info %>
+		</p>
+		<p>
+			<%= f.label :travel_item %>
+			<%= f.text_field :travel_item %>
+		</p>
+
+		<p>
+			<%= f.submit %>
+		</p>
+
+<% end %>

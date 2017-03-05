@@ -12,7 +12,10 @@
  *
  *= require_tree .
  *= require_self
- */
+ *= require social-share-button
+ /*toppage*/
+
+
 
 /*article index action*/
 .iamges-sec{
@@ -34,3 +37,8 @@
 }
 
 /*article new action*/
+
+/*articles show action*/
+.show-sec{
+	text-align: center;
+}
