@@ -3,6 +3,7 @@
 	<div class="show-img">
 		<%= image_tag @article.image %>
 	</div>
+	<%= link_to @user.email, user_path(@article.user_id) %>
 
 	<h2>body</h2>
 		<p><%= @article.body %></p>
@@ -23,6 +24,7 @@
 		<p><%= @article.travel_item %></p>
 
 	<%= link_to "Edit", edit_article_path(@article.id) %>
+
 
 
 </div>
