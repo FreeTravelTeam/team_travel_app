@@ -1,0 +1,18 @@
+
+
+<% if user_signed_in? %>
+  <!-- ログインしているユーザーがいいねしてるかどうか -->
+  <% if article.like_user?(current_user.id) %>
+    <%= link_to article_likes_path(article.id), method: :delete, id: "like-button", remote: true do %>
+      <i class="fa fa-heart"></i>
+    <% end %>
+  <% else %>
+    <%= link_to article_likes_path(article.id), method: :post, id: "like-button", remote: true do %>
+    <i class="fa fa-heart-o" ></i>
+    <% end %>
+  <% end %>
+  <%= article.likes.count %>
+<% else %>
+<!-- <i class="fa fa-heart-o" aria-hidden="true"></i> -->
+ <% end %>
+
