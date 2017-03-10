@@ -1,1 +1,10 @@
 個人ページ
+<% @article.each do |article|%>
+	<div class="index-iamges">
+		<div class="index-image">
+		    <%= link_to article_path(article.id) do %>
+			<%= image_tag article.image.url, class: "img"%>
+			<% end %>
+		</div> 
+	</div>
+	<% end %>

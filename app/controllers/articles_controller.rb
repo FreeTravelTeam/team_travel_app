@@ -17,8 +17,11 @@ class ArticlesController < ApplicationController
 	def create
 		@article = Article.new(set_params)
 		@article.user_id = current_user.id
-		@article.save
-		redirect_to articles_path
+		if @article.save
+			redirect_to user_path(current_user.id)
+		else
+			render 'form'
+		end
 	end
 
 	def destroy
