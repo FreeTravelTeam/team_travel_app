@@ -18,23 +18,25 @@
 
 
 /*article index action*/
-.iamges-sec{
-	width: 50%;
-	margin: 0 auto;
-	display: flex;
+/*.index-container{
+	margin: 0 auto;	
 }
-.index-images{
+.cl-md-3{
 	width: 33.3333%;
 }
 .index-image{
-	width: 60%;
+	height: 300px;
 	margin: auto;
 }
-.index-image .img{
+.img{
 	display: inline-block;
 	width: 100%;
 	height: 100%;
-}
+}*/
+
+
+
+
 
 /*article new action*/
 

@@ -1,43 +1,39 @@
+        <div class="form_group">
+         <%= search_form_for @search do |f| %>
+            <p class="search-form">
+              <%= f.label :country_eq, "タイトル検索" %>
+              <%= f.text_field :country_eq, class: "form-control", placeholder: "国名" %>
+            </p>
 
+            <p class="search-form">
+              <%= f.label :region_cont, "地域で検索" %>
+              <%= f.text_field :region_cont, class: "form-control", placeholder: "地域名" %>
+            </p>
 
-<!-- 検索フォーム -->
-<div class="form_group">
-  <%= search_form_for @search do |f| %>
-    <p class="search-form">
-      <%= f.label :country_eq, "タイトル検索" %>
-      <%= f.text_field :country_eq, class: "form-control", placeholder: "国名" %>
-    </p>
+            <p class="search-form">
+              <%= f.label :price, "予算で検索" %>
+              <%= f.text_field :price_lt, class: "form-control", placeholder: "¥" %>
+            </p>
 
-    <p class="search-form">
-    	<%= f.label :region_cont, "地域で検索" %>
-    	<%= f.text_field :region_cont, class: "form-control", placeholder: "地域名" %>
-    </p>
-
-    <p class="search-form">
-      <%= f.label :price, "予算で検索" %>
-      <%= f.text_field :price_lt, class: "form-control", placeholder: "¥" %>
-    </p>
-
-    <p class="search-btn">
-    	<%= f.submit '検索', class: "btn btn-primary" %>
-		<%= link_to 'クリア', url_for, class: "btn btn-default" %>
-    </p>
-	
-
-  <% end %>
-</div>
-
-
+            <p class="search-btn">
+            <%= f.submit '検索', class: "btn btn-primary" %>
+            <%= link_to 'クリア', url_for, class: "btn btn-default" %>
+            </p>
+          <% end %>
+          </div>
+      </div>
 <!-- 一覧セクション -->
-<section class="iamges-sec">
-	<% @articles.each do |article| %>
-	<div class="index-iamges">
-		<div class="index-image">
-		    <%= link_to article_path(article.id) do %>
-			<%= image_tag article.image.url, class: "img"%>
-			<% end %>
-		</div>
-		<p><%= link_to "さらに表示", article_path(article.id) %></p> 
-	</div>
-	<% end %>
+<section class="index-container">
+      <% @articles.each do |article| %>
+        <%= article.title %>
+	 　     <div class="col-md-3 index-images">
+		　      <div class="index-image">
+		          <%= link_to article_path(article.id) do %>
+			　       <%= image_tag article.image.url, class: "img"%>
+            　<% end %>
+		　      </div>
+	         <p><%= link_to "さらに表示", article_path(article.id) %></p> 
+	       </div>
+	    <% end %>
 </section>
+<div class="paginate"><%= paginate @articles %></div>

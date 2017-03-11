@@ -10,8 +10,14 @@
 
   <body>
   <header id="header" class="main-head">
-  	<h1>Free Team Travel App</h1>
 
+  	<h1>Free Team Travel App</h1>
+      <p><% if user_signed_in? %>
+          <%= link_to current_user.email, user_path(current_user.id) %>
+          <% else %>
+          <%= link_to "ログイン", new_user_session_path %>
+         <% end %>
+      </p>
     <nav class="head-nav-bar">
       <ul class="head-nav">
           <li><%= link_to "TOP", root_path %></li>
@@ -28,7 +34,7 @@
       </ul>
     </nav>
 
-  </header><!-- /header -->
+  </header>
     <%= yield %>
   </body>
 </html>
