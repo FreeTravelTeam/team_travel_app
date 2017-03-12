@@ -25,7 +25,6 @@ ActiveRecord::Schema.define(version: 20170312091430) do
     t.integer  "user_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
-    t.string   "title"
     t.integer  "likes_count"
     t.integer  "like_user_id"
     t.string   "title"
