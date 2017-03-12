@@ -23,10 +23,8 @@ ActiveRecord::Schema.define(version: 20170312091430) do
     t.text     "safety_info"
     t.text     "travel_item"
     t.integer  "user_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-    t.integer  "likes_count"
-    t.integer  "like_user_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.string   "title"
   end
 

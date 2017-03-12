@@ -9,8 +9,8 @@
 10.times do |i|
 	Article.create!(
 		image:open("app/assets/images/IMG_0012.JPG"),
-		title: "タイトル",
-		body: "タイトル#{i}",
+		title: "タイトル#{i}",
+		body: "body",
 		user_id: 1,
 		)
 end
