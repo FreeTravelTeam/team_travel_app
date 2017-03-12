@@ -30,5 +30,8 @@
 
 
 </div>
+<div id="like-buttons">
+	<%= render 'likes/like', article: @article %>
+</div>
 
 <%= social_share_button_tag(@article.id) %>

@@ -22,11 +22,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'therubyracer', platforms: :ruby
 
 gem 'less-rails'
-
 gem 'kaminari'
-
-
-
 gem 'twitter-bootstrap-rails'
 
 gem 'carrierwave'
@@ -39,6 +35,8 @@ gem 'ransack'
 gem 'social-share-button'
 
 gem 'hirb'
+gem 'pry'
+gem 'font-awesome-rails'
 
 
 # Use jquery as the JavaScript library
