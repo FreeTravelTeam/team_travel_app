@@ -1,10 +1,13 @@
 <h2>個人ページ</h2>
 
-<% @artcles.each do |article| %>
+<li>
+ <div class="text">自分の投稿した記事</div>
+ <% @artcles.each do |article| %>
     <%= link_to article.title ,article_path(article.id) %>
     <%= image_tag article.image.url %>
-    
-<% end %>
-
+    <i class="fa fa-heart"></i>
+    <%= article.likes.count %>
+ <% end %>
+</li>
     
 
