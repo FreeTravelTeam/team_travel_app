@@ -17,8 +17,19 @@ class ArticlesController < ApplicationController
 	def create
 		@article = Article.new(set_params)
 		@article.user_id = current_user.id
-		@article.save
-		redirect_to articles_path
+		if  
+			@article.save then
+			redirect_to articles_path
+		else
+			re = ''
+			@article.errors.messages.each do |key, vals|
+				vals.each do |val|
+					re += '<span style="color:red">' + key.to_s + '</span>' + val + '<br>'
+				end
+			end
+			@msg = re.html_safe
+			render 'articles/new'
+		end
 	end
 
 	def destroy
@@ -46,6 +57,6 @@ class ArticlesController < ApplicationController
 
 	private
 	def set_params
-		params.require(:article).permit(:body, :image, :price, :from_date, :to_date, :country, :region, :safety_info, :travel_item, :user_id)
+		params.require(:article).permit(:body, :image, :price, :from_date, :to_date, :country, :region, :safety_info, :travel_item, :user_id, :title)
 	end
 end
