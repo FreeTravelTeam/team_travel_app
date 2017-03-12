@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170312091430) do
+ActiveRecord::Schema.define(version: 20170310062407) do
 
   create_table "articles", force: :cascade do |t|
     t.text     "body"
@@ -27,7 +27,6 @@ ActiveRecord::Schema.define(version: 20170312091430) do
     t.datetime "updated_at",   null: false
     t.integer  "likes_count"
     t.integer  "like_user_id"
-    t.string   "title"
   end
 
   create_table "likes", force: :cascade do |t|

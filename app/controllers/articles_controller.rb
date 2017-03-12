@@ -7,7 +7,7 @@ class ArticlesController < ApplicationController
 		@articles = Article.all
 		@search = Article.ransack(params[:q])
 		@articles = @search.result(distinct: true)
-
+		@articles = Article.page(params[:page]).per(5)
 	end
 
 	def new
