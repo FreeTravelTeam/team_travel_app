@@ -37,6 +37,8 @@ gem 'hirb'
 gem 'pry'
 gem 'font-awesome-rails'
 
+gem 'kaminari-bootstrap'
+
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

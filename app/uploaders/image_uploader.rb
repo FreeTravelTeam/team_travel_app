@@ -37,7 +37,7 @@ class ImageUploader < CarrierWave::Uploader::Base
     "#{Time.now.strftime('%Y%m%d%H%M%S')}.jpg" if original_filename.present?
   end
 
-  process :resize_to_limit => [300, 300]
+  process :resize_to_limit => [100, 100]
 
   # Create different versions of your uploaded files:
   # process resize_to_fit: [50, 50]

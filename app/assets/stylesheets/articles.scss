@@ -3,6 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+.clearfix:after{
+	content:"";
+	display: block;
+	clear: both;
+}
+
 //共通ヘッダー
 
 .head-nav-bar{
@@ -31,3 +37,15 @@
 .top-sec{
 	height: 250px;
 }
+
+
+//articles_index記事部分
+
+.index-each{
+	width: 65%;
+	margin-left: auto;
+}
+
+
+
+

@@ -1,6 +1,6 @@
 
 
-<!-- 検索フォーム -->
+<!-- ================= 検索フォーム ================ -->
 <div class="form_group container">
   <%= search_form_for @search do |f| %>
     <p class="search-form">
@@ -28,20 +28,33 @@
 </div>
 
 
-<!-- 一覧セクション -->
-<section class="iamges-sec">
+<!-- ================ 一覧セクション =================== -->
+<div class="index-container">
+
 	<% @articles.each do |article| %>
-	<div class="index-iamges">
-		<div class="index-image">
-		    <%= link_to article_path(article.id) do %>
-			<%= image_tag article.image.url, class: "img"%>
-			<% end %>
-		</div>
-		<p>
-      <%= link_to "さらに表示", article_path(article.id) %>　
-      <i class="fa fa-heart"></i>
-      <%= article.likes.count %>
-    </p> 
-	</div>
+  	<div class="index-each clearfix">
+
+      <div class="index-image">
+    		  <%= link_to article_path(article.id) do %>
+    			<%= image_tag article.image.url, class: "img"%>
+    			<% end %>
+      </div>
+
+      <div class="content-box">
+        <p class="body-text">
+          <%= article.body %>
+        </p>
+        <div class="sub-con">
+          <p>
+            <%= link_to "さらに表示", article_path(article.id) %>　
+            <i class="fa fa-heart"></i>
+            <%= article.likes.count %>
+          </p>
+        </div>
+      </div>
+
+  	</div>
 	<% end %>
-</section>
+
+
+</div>
