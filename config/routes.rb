@@ -1,9 +1,16 @@
 Rails.application.routes.draw do
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+<<<<<<< HEAD
   resources :articles
   
   get '/users/:id' => 'users#show', as: 'user'
+=======
+  resources :articles do
+  	resource :likes, only:[:create, :destroy]
+  end
+  
+>>>>>>> develop
   resources :users, only: :show
 
   root 'articles#top'
