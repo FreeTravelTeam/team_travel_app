@@ -25,6 +25,8 @@ gem 'less-rails'
 
 gem 'kaminari'
 
+
+
 gem 'twitter-bootstrap-rails'
 
 gem 'carrierwave'
