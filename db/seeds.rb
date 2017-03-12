@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+10.times do |i|
+	Article.create!(
+		image:open("app/assets/images/IMG_0012.JPG"),
+		title: "タイトル",
+		body: "タイトル#{i}",
+		user_id: 1,
+		)
+end
+

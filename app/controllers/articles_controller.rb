@@ -30,7 +30,7 @@ class ArticlesController < ApplicationController
     def show
     	@article = Article.find(params[:id])
     	user_id = @article.user_id
-    	@user = User.find(user_id)
+    	# @user = User.find(user_id)
     end
 
     def edit
