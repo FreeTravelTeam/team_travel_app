@@ -15,8 +15,8 @@
  *= require social-share-button
  *= require font-awesome
  /*toppage*/
-
-
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
 /*article index action*/
 /*.index-container{
@@ -36,7 +36,6 @@
 }*/
 .index-image{
 	float: left;
-}
 }
 
 

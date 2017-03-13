@@ -23,7 +23,7 @@ gem 'therubyracer', platforms: :ruby
 
 gem 'less-rails'
 gem 'kaminari'
-gem 'twitter-bootstrap-rails'
+# gem 'twitter-bootstrap-rails'
 gem 'bootstrap-sass'
 
 gem 'carrierwave'
