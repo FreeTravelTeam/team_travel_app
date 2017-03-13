@@ -30,19 +30,24 @@
 
 <!-- 一覧セクション -->
 <section class="iamges-sec">
-	<% @articles.each do |article| %>
-	<div class="index-iamges">
-		<div class="index-image">
-		    <%= link_to article_path(article.id) do %>
-			<%= image_tag article.image.url, class: "img"%>
-			<% end %>
-		</div>
-		<p>
-      <%= link_to "さらに表示", article_path(article.id) %>　
-      <i class="fa fa-heart"></i>
-      <%= article.likes.count %>
-    </p> 
-	</div>
+	 <% @articles.each do |article| %>
+   <div class="container index-article">
+	   <div class="col-md-3 index-images">
+		    <div class="index-image">
+		      <%= link_to article_path(article.id) do %>
+		        <%= image_tag article.image, class: "img"%>
+			   <% end %>
+		    </div>
+            <p>
+              <%= link_to article.title, article_path(article.id)%>
+            </p>
+		         <p>
+              <%= link_to "さらに表示", article_path(article.id) %>　
+                <i class="fa fa-heart"></i>
+              <%= article.likes.count %>
+            </p> 
+	    </div>
+    </div>
 	<% end %>
 </section>
 

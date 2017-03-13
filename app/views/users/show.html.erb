@@ -1,1 +1,10 @@
-個人ページ
+<h2>個人ページ</h2>
+
+<% @artcles.each do |article| %>
+    <%= link_to article.title ,article_path(article.id) %>
+    <%= image_tag article.image.url %>
+    
+<% end %>
+
+    
+
