@@ -34,7 +34,10 @@
 	width: 100%;
 	height: 100%;
 }*/
-
+.index-image{
+	float: left;
+}
+}
 
 
 
@@ -42,6 +45,3 @@
 /*article new action*/
 
 /*articles show action*/
-.show-sec{
-	text-align: center;
-}

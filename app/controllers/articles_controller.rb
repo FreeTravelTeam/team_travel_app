@@ -24,7 +24,7 @@ class ArticlesController < ApplicationController
 			re = ''
 			@article.errors.messages.each do |key, vals|
 				vals.each do |val|
-					re += '<span style="color:red">' + key.to_s + '</span>' + val + '<br>'
+					re += '<span style="color:red">' + key.to_s + '</span>' + val
 				end
 			end
 			@msg = re.html_safe
@@ -50,8 +50,19 @@ class ArticlesController < ApplicationController
 
     def update
     	@article = Article.find(params[:id])
-    	@article.update(set_params)
-    	redirect_to articles_path(@article.id)
+    	if  
+			@article.update(set_params) then
+			redirect_to articles_path
+		else
+			re = ''
+			@article.errors.messages.each do |key, vals|
+				vals.each do |val|
+					re += '<span style="color:red">' + key.to_s + '</span>' + val
+				end
+			end
+			@msg = re.html_safe
+			render 'articles/edit'
+		end
     end
 
 
