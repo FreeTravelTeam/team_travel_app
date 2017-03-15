@@ -42,6 +42,7 @@ class ArticlesController < ApplicationController
     	@article = Article.find(params[:id])
     	user_id = @article.user_id
     	@user = User.find(user_id)
+    	# @cmments = Comment.find(params[:id])
     end
 
     def edit
