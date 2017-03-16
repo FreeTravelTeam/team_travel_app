@@ -1,4 +1,4 @@
-
+<%= render 'header' %>
 
 <!-- 検索フォーム -->
 <div class="form_group container">
@@ -33,15 +33,15 @@
 	 <% @articles.each do |article| %>
    <div class="container index-article">
 	   <div class="row">
-		    <div class="index-image col-md-5">
+		    　<div class="index-image col-md-5">
 		      <%= link_to article_path(article.id) do %>
 		        <%= image_tag article.image, class: "img"%>
 			   <% end %>
-		    </div>
+		    　</div>
         <div class="col-md-7">
             <p>
               <%= link_to article.title, article_path(article.id)%>
-            </p>
+             </p>
 		         <p>
               <%= link_to "さらに表示", article_path(article.id) %>　
                 <i class="fa fa-heart"></i>
