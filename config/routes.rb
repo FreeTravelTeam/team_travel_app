@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   end
 
   resources :users, only:[:show, :index]
+  resources :comments, only:[:create]
 
   root 'articles#top'
 

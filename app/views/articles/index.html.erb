@@ -32,14 +32,14 @@
 <section class="iamges-sec">
 	 <% @articles.each do |article| %>
    <div class="container index-article">
-	   <div class="col-md-3 index-images">
-		      <div class="index-image">
-		       <%= link_to article_path(article.id) do %>
+	   <div class="row">
+		    　<div class="index-image col-md-5">
+		      <%= link_to article_path(article.id) do %>
 		        <%= image_tag article.image, class: "img"%>
-			     <% end %>
-		      </div>
-          <div class="index-sentense">
-             <p>
+			   <% end %>
+		    　</div>
+        <div class="col-md-7">
+            <p>
               <%= link_to article.title, article_path(article.id)%>
              </p>
 		         <p>
@@ -47,7 +47,7 @@
                 <i class="fa fa-heart"></i>
               <%= article.likes.count %>
             </p> 
-          </div>
+        </div>
 	    </div>
     </div>
 	<% end %>
