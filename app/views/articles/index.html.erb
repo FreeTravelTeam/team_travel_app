@@ -31,6 +31,7 @@
 <button type="button" class="btn btn-info btn-lg" data-toggle="modal" style="display: block;" data-target="#myModal">Open Search</button>
 
 <!-- Modal -->
+<%= search_form_for @search do |f| %>
 <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
@@ -40,36 +41,35 @@
         <button type="button" class="close" data-dismiss="modal">&times;</button>
         <h4 class="modal-title">Search</h4>
       </div>
-      <%= search_form_for @search do |f| %>
       <div class="modal-body">
         <p class="search-form">
           <%= f.label :country_eq, "タイトル検索" %>
           <%= f.text_field :country_eq, class: "form-control", placeholder: "国名" %>
         </p>
-      </div>
-      <div class="modal-body">
+     <!--  </div> -->
+     <!--  <div class="modal-body"> -->
         <p class="search-form">
           <%= f.label :region_cont, "地域で検索" %>
           <%= f.text_field :region_cont, class: "form-control", placeholder: "地域名" %>
         </p>
-      </div>
-      <div class="modal-body">
+      <!-- </div> -->
+      <!-- <div class="modal-body"> -->
         <p class="search-form">
           <%= f.label :price_lt, "予算で検索" %>
           <%= f.text_field :price_lt, class: "form-control", placeholder: "￥" %>
         </p>
       </div>
       <div class="modal-footer">
-        <p class="search-btn">
+        <!-- <p class="search-btn"> -->
           <%= f.submit '検索', class: "btn btn-primary" %>
           <%= link_to 'クリア', url_for, class: "btn btn-default" %>
-        </p>
+        <!-- </p> -->
       </div>
-      <% end %>
     </div>
 
   </div>
 </div>
+<% end %>
 
 
 <!-- 一覧セクション -->
@@ -84,12 +84,12 @@
 		    　</div>
         <div class="col-md-7">
             <p>
-              <%= link_to article.title, article_path(article.id)%>
+              <%= article.title %>
              </p>
 		         <p>
               <%= link_to "さらに表示", article_path(article.id) %>　
                 <i class="fa fa-heart"></i>
-              <%= article.likes.count %>
+              <span class="badge"><%= article.likes.count %></span>
             </p> 
         </div>
 	    </div>

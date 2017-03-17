@@ -9,11 +9,17 @@
 	</div>
 	<%= link_to @user.email, user_path(@article.user_id) %>
 
+	<h2>Title</h2>
+	<p><%= @article.title %></p>
+
 	<h2>body</h2>
 		<p><%= @article.body %></p>
 
 	<h2>出発日</h2>
 		<p><%= @article.from_date %></p>
+
+	<h2>予算</h2>
+		<p><%= @article.price %></p>
 
 	<h2>Country</h2>
 		<p><%= @article.country %></p>
