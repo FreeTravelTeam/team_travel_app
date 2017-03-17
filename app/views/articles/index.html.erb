@@ -26,11 +26,10 @@
   <% end %>
 </div>
 
-
 <!-- 一覧セクション -->
 <div class="container col-md-12">
       <% @articles.each do |article| %>
-         <div class="thumbnail col-md-3">
+         <div class="thumbnail col-md-3 index_thumbnail" id="myScrollspy">
 		       <%= link_to article_path(article.id) do %>
 		        <%= image_tag article.image, class: "img", :alt => 'Lights', :width => '100%' %>
 			       <% end %>

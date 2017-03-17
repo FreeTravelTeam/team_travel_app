@@ -43,7 +43,7 @@
 		color: black;
 	}
 	
-	.thumbnail{
+	.index_thumbnail{
 	margin: 30px;
 	}
 	
@@ -62,5 +62,23 @@
 	background: #e68a00;
 	}
 
+  #myScrollspy { 
+      top: 50px;
+      height: 400px;
+      overflow: auto;
+      font-size: 28px;
+  }
+
+//article_showページ
+
+	.show-sec{
+	text-align: center;
+	}
+
+	.article_show_img{
+	margin: 0 auto;
+	width: 500px;
+	height: 500px;
+	}
 
 
