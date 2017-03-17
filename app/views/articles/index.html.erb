@@ -28,24 +28,24 @@
 
 
 <!-- 一覧セクション -->
-<div class="iamges-sec">
-	   <% @articles.each do |article| %>
-		  <div class="index-image col-md-3">
+<div class="container col-md-12">
+      <% @articles.each do |article| %>
+         <div class="thumbnail col-md-3">
 		       <%= link_to article_path(article.id) do %>
 		        <%= image_tag article.image, class: "img", :alt => 'Lights', :width => '100%' %>
-			     <% end %>
-            <div class="caption thumbnail">
+			       <% end %>
+                <div class="caption">
                   <p class="index-title"> 
                    <%= link_to article.title, article_path(article.id), class: "index-title"%>
                   </p>
 		            <div class="index-sub-title">
-                  <%= link_to "さらに表示", article_path(article.id) %>　
+                <button class="btn warning"><%= link_to "さらに表示", article_path(article.id), class: "index-sub-title" %></button>
                   <i class="fa fa-heart"></i>
                   <%= article.likes.count %>
                 </div> 
-            </div>
-	     </div>
-	   <% end %>
-</div>
+                </div>
+          </div>
+      <% end %>
+ </div>
 
 <div class="paginate col-md-12"><%= paginate @articles %></div>
