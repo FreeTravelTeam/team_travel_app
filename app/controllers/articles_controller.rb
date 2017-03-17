@@ -6,10 +6,10 @@ class ArticlesController < ApplicationController
 	end
 
 	def index
-		@articles = Article.all
+		@articles = Article.all.order("id DESC")
 		@search = Article.ransack(params[:q])
 		@articles = @search.result(distinct: true)
-		@articles = Article.page(params[:page]).per(5)
+		@articles = Article.page(params[:page]).per(6)
 	end
 
 	def new
