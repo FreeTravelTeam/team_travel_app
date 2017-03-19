@@ -14,7 +14,7 @@
 		<div class="container">
   			<div class="jumbotron">
 				<h2>body</h2>
-					<p><%= @article.body %></p>
+					<p><%= @article.body.html_safe %></p>
 
 				<h2>出発日</h2>
 					<p><%= @article.from_date %></p>
