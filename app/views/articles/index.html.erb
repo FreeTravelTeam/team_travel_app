@@ -71,27 +71,28 @@
 <% end %>
 
 
-<!-- 一覧セクション -->
 
+<!-- 一覧セクション -->
 <div class="paginate"><%= paginate @articles %></div>
 <div class="container col-md-12">
       <% @articles.each do |article| %>
-         <div class="thumbnail col-md-3">
+         <div class="thumbnail col-lg-3 index_thumbnail">
 		       <%= link_to article_path(article.id) do %>
 		        <%= image_tag article.image, class: "img", :alt => 'Lights', :width => '100%' %>
 			       <% end %>
                 <div class="caption">
                   <p class="index-title"> 
-                   <%= link_to article.title, article_path(article.id), class: "index-title"%>
+                   <%= link_to article.title, article_path(article.id), class: "index-title vh"%>
                   </p>
-		            <div class="index-sub-title">
-                <button class="btn warning"><%= link_to "さらに表示", article_path(article.id), class: "index-sub-title" %></button>
-                  <i class="fa fa-heart"></i>
-                  <%= article.likes.count %>
-                </div> 
+		              <div class="index-sub-title">
+                    <button class="btn warning"><%= link_to "さらに表示", article_path(article.id), class: "index-sub-title" %></button>
+                    <i class="fa fa-heart"></i>
+                    <%= article.likes.count %>
+                  </div> 
                 </div>
           </div>
       <% end %>
+  </div>
  </div>
 
 <div class="paginate col-md-12"><%= paginate @articles %></div>

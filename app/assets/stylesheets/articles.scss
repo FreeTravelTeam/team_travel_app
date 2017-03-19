@@ -35,32 +35,52 @@
 				}
 		}
 	}	
+	
 	.index-title{
-		color: black;
-		font-size: 30px;
-	}
-	.index-sub-title{
-		color: black;
+		color: #a9a9a9;
+		font-size: 3vh;
 	}
 	
-	.thumbnail{
-	margin: 30px;
+	.index-sub-title{
+		color: white;
+	}
+	
+	.index_thumbnail{
+		overflow: scroll;   /* スクロール表示 */ 
+  		width: 100px;
+ 		height: 400px;
+		margin: 30px;
 	}
 	
 	.btn {
-    border: none; /* Remove borders */
-    color: white; /* Add a text color */
-    padding: 14px 28px; /* Add some padding */
-    cursor: pointer; /* Add a pointer cursor on mouse-over */
+    	border: none; /* Remove borders */
+    	color: white; /* Add a text color */
+    	padding: 14px 28px; /* Add some padding */
+    	cursor: pointer; /* Add a pointer cursor on mouse-over */
 	}
 	
 	.warning {
-	background-color: #ff6347;
+		background-color: #66ffcc;
 	} /* Orange */
 
 	.warning:hover {
-	background: #e68a00;
+		background: #e68a00;
 	}
 
 
+//article_showページ
+
+	.show-sec{
+		text-align: center;
+	}
+
+	.article_show_img{
+		margin: 0 auto;
+		width: 500px;
+		height: auto;
+	}
+
+	.article_show_title{
+		color: #696969;
+	}
 
