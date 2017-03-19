@@ -2,10 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-*{
-	padding: 0;
-	margin: 0;
-}
+
 //共通ヘッダー
 
 
@@ -21,22 +18,49 @@
 
 
 //indexページ
-.head-nav-bar{
 
-	.head-nav{
-		width: 100%;
-		margin: 20px;
+	.head-nav-bar{
 
-		li{
+		.head-nav{
 			width: 100%;
-			list-style: none;
-		}
-			a{
+			margin: 20px;
 
-				text-decoration: none;
+			li{
+				width: 100%;
+				list-style: none;
 			}
+				a{
+
+					text-decoration: none;
+				}
+		}
+	}	
+	.index-title{
+		color: black;
+		font-size: 30px;
 	}
-}
+	.index-sub-title{
+		color: black;
+	}
+	
+	.thumbnail{
+	margin: 30px;
+	}
+	
+	.btn {
+    border: none; /* Remove borders */
+    color: white; /* Add a text color */
+    padding: 14px 28px; /* Add some padding */
+    cursor: pointer; /* Add a pointer cursor on mouse-over */
+	}
+	
+	.warning {
+	background-color: #ff6347;
+	} /* Orange */
+
+	.warning:hover {
+	background: #e68a00;
+	}
 
 
 

@@ -1,5 +1,4 @@
 <%= render 'header' %>
-
 <!-- 検索フォーム -->
 <!-- <div class="form_group container">
   <%= search_form_for @search do |f| %>
@@ -28,7 +27,7 @@
 </div> -->
 
 <!-- Trigger the modal with a button -->
-<button type="button" class="btn btn-info btn-lg" data-toggle="modal" style="display: block;" data-target="#myModal">Open Search</button>
+<!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" style="display: block;" data-target="#myModal">Open Search</button> -->
 
 <!-- Modal -->
 <%= search_form_for @search do |f| %>
@@ -73,28 +72,26 @@
 
 
 <!-- 一覧セクション -->
-<section class="iamges-sec">
-	 <% @articles.each do |article| %>
-   <div class="container index-article">
-	   <div class="row">
-		    　<div class="index-image col-md-5">
-		      <%= link_to article_path(article.id) do %>
-		        <%= image_tag article.image, class: "img"%>
-			   <% end %>
-		    　</div>
-        <div class="col-md-7">
-            <p>
-              <%= article.title %>
-             </p>
-		         <p>
-              <%= link_to "さらに表示", article_path(article.id) %>　
-                <i class="fa fa-heart"></i>
-              <span class="badge"><%= article.likes.count %></span>
-            </p> 
-        </div>
-	    </div>
-    </div>
-	<% end %>
-</section>
 
 <div class="paginate"><%= paginate @articles %></div>
+<div class="container col-md-12">
+      <% @articles.each do |article| %>
+         <div class="thumbnail col-md-3">
+		       <%= link_to article_path(article.id) do %>
+		        <%= image_tag article.image, class: "img", :alt => 'Lights', :width => '100%' %>
+			       <% end %>
+                <div class="caption">
+                  <p class="index-title"> 
+                   <%= link_to article.title, article_path(article.id), class: "index-title"%>
+                  </p>
+		            <div class="index-sub-title">
+                <button class="btn warning"><%= link_to "さらに表示", article_path(article.id), class: "index-sub-title" %></button>
+                  <i class="fa fa-heart"></i>
+                  <%= article.likes.count %>
+                </div> 
+                </div>
+          </div>
+      <% end %>
+ </div>
+
+<div class="paginate col-md-12"><%= paginate @articles %></div>
