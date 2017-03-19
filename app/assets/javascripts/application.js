@@ -18,12 +18,3 @@
 //= require social-share-button
 //= require bootstrap-sprockets
 
-$(document).ready(function(){
-    removeSection = function(e){
-        $(e).parents("#myScrollspy > div").remove();
-        $('#myScrollspy').each(function(){
-            $(this).scrollspy('refresh');
-        });
-    };
-});
-
