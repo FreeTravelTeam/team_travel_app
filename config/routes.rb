@@ -10,10 +10,7 @@ Rails.application.routes.draw do
   	resource :likes, only:[:create, :destroy]
   end
   
-  
-  resources :users, only: [:show] do
-    get :likes, on: :member
-  end
+  resources :users, only: :show
 
   root 'articles#top'
   get '/users' => "users#index"

@@ -9,12 +9,5 @@
     <%= article.likes.count %>
  <% end %>
 </li>
-
-<li>
- <%= link_to likes_user_path(@user.id) do %>
-  <div class="text">いいねした記事</div>
-  <div class="num"><%= @user.likes.count %></div>
- <% end %>
-</li>
     
 

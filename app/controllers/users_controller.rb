@@ -5,8 +5,4 @@ class UsersController < ApplicationController
   @artcles = @user.articles
  end
  
- def likes
-  @user = User.find(params[:id])
- end
- 
 end
