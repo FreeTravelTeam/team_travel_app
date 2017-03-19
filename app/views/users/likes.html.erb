@@ -1,0 +1,16 @@
+<% if @user.likes.empty? %>
+   <div class="list-group-item">
+       まだお気に入りされた投稿はありません。
+   </div>
+<% end %>
+<% @user.likes.map { |l| l.article }.each do |article| %>
+   <h4 class="user">
+       <span class="user-email">
+           <link_to article.user.email,user_path(article.user) %>
+       </span>
+    <span class="user-id"><%= article.user.email %></span>
+   </h4>
+   <div class="article-image">
+       <%= image_tag article.image.url %>
+   </div>
+ <% end %>
