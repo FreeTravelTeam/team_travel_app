@@ -14,36 +14,39 @@
  *= require_self
  *= require social-share-button
  *= require font-awesome
+ *= require_tree ../../../vendor/assets/stylesheets/.
  /*toppage*/
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-/*article index action*/
-/*.index-container{
-	margin: 0 auto;	
+*{
+	margin: 0;
+	paddeing: 0;
 }
-.cl-md-3{
-	width: 33.3333%;
+/*共通テンプレート*/
+#header{
+	padding-bottom: 100px;
 }
-.index-image{
-	height: 300px;
-	margin: auto;
-}
-.img{
-	display: inline-block;
+.navbar-default{
 	width: 100%;
-	height: 100%;
-}*/
-.index-image{
-	float: left;
-}
- .main-title{
-font-family:"メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	position: fixed;
+	z-index: 10;
 }
 
-
+/*article index action*/
+/*.index-container*/
 
 
 /*article new action*/
 
 /*articles show action*/
+
+/*session画面*/
+#container{
+	height: 700px;
+	width: 100%;
+}
+#theTarget{
+	width: 70%;
+	margin: 30px auto;
+}
