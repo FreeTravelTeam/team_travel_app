@@ -1,6 +1,6 @@
 <header id="header" class="main-head">
 
-  	<h1 class="main-title">Recueldo</h1>
+  	<h1 class="main-title" data-image-src="<%= asset_path "beach.jpg"%>"></h1>
       <p><% if user_signed_in? %>
           <%= link_to current_user.name, user_path(current_user.id) %>
           <% else %>

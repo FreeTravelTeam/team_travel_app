@@ -17,4 +17,3 @@
 //= require_tree ../../../vendor/assets/javascripts/.
 //= require social-share-button
 //= require bootstrap-sprockets
-
