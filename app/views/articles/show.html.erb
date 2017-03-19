@@ -1,37 +1,44 @@
-<div class="show-sec">
+ 
+ <%= render 'header' %>
+ <div class="show-sec">
 
-
-
+<div class="container">
 	<div class="show-img">
-		<%= image_tag @article.image %>
-	</div>
-	<%= link_to @user.email, user_path(@article.user_id) %>
+		<div class="thumbnail article_show_img">
+		<%= image_tag @article.image, class: "article_show_img", :alt => 'Lights', :width => '100%' %>
+			<div class="caption">
+				<p class="article_show_name"><%= link_to @user.name, user_path(@article.user_id) %></p>
+				<h2 class="article_show_title"><%= @article.title %></h2>
+			</div>
+		</div>
+		<div class="container">
+  			<div class="jumbotron">
+				<h2>body</h2>
+					<p><%= @article.body %></p>
 
-	<h2>body</h2>
-		<p><%= @article.body %></p>
+				<h2>出発日</h2>
+					<p><%= @article.from_date %></p>
 
-	<h2>出発日</h2>
-		<p><%= @article.from_date %></p>
+				<h2>Country</h2>
+					<p><%= @article.country %></p>
 
-	<h2>Country</h2>
-		<p><%= @article.country %></p>
+				<h2>Reigon</h2>
+					<p><%= @article.region %></p>
 
-	<h2>Reigon</h2>
-		<p><%= @article.region %></p>
+				<h2>Safety into</h2>
+					<p><%= @article.safety_info %></p>
 
-	<h2>Safety into</h2>
-		<p><%= @article.safety_info %></p>
+				<h2>Travel item</h2>
+					<p><%= @article.travel_item %></p>
 
-	<h2>Travel item</h2>
-		<p><%= @article.travel_item %></p>
+				<button class="btn warning"><%= link_to "Edit", edit_article_path(@article.id), class: "index-sub-title" %></button>
 
-	<%= link_to "Edit", edit_article_path(@article.id) %>
-
-
-
-</div>
-<div id="like-buttons">
-	<%= render 'likes/like', article: @article %>
+				<div id="like-buttons">
+					<%= render 'likes/like', article: @article %>
+				</div>
+			</div>	
+		</div>
+	 </div>
 </div>
 
 <%= social_share_button_tag(@article.id) %>

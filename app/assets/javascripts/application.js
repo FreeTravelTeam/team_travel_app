@@ -12,7 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require twitter/bootstrap
+
 
 //= require_tree ../../../vendor/assets/javascripts/.
 //= require social-share-button
+//= require bootstrap-sprockets

@@ -14,34 +14,39 @@
  *= require_self
  *= require social-share-button
  *= require font-awesome
+ *= require_tree ../../../vendor/assets/stylesheets/.
  /*toppage*/
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
-
+*{
+	margin: 0;
+	paddeing: 0;
+}
+/*共通テンプレート*/
+#header{
+	padding-bottom: 100px;
+}
+.navbar-default{
+	width: 100%;
+	position: fixed;
+	z-index: 10;
+}
 
 /*article index action*/
-/*.index-container{
-	margin: 0 auto;	
-}
-.cl-md-3{
-	width: 33.3333%;
-}
-.index-image{
-	height: 300px;
-	margin: auto;
-}
-.img{
-	display: inline-block;
-	width: 100%;
-	height: 100%;
-}*/
-
-
-
+/*.index-container*/
 
 
 /*article new action*/
 
 /*articles show action*/
-.show-sec{
-	text-align: center;
+
+/*session画面*/
+#container{
+	height: 700px;
+	width: 100%;
+}
+#theTarget{
+	width: 70%;
+	margin: 30px auto;
 }
