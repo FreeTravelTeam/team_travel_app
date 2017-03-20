@@ -103,13 +103,16 @@ body{
 	width: 85%;
 	margin: 40px auto;
 	border-radius: 30px;
-	background-color: lighten( #ffe9a9, 12%);
+	background-color: lighten( #ffe9a9, 13%);
 	box-shadow: 5px 5px;
+	color: #333;
 }
 
 .create-title{
 	text-align: center;
 	font-family: 'Ranga', cursive;
+	opacity: 0.8;
+	padding: 50px 0 30px;
 }
 
 .main-article-form{
