@@ -5,21 +5,20 @@
           <%= link_to "A Traveller in Time", root_path, class: "navbar-brand" %>
         </div>
            
-        
-          <% if user_signed_in? %>
-            <ul class="nav navbar-nav">
-              <li class=""><%= link_to "Travels", articles_path %></li>
+          <ul class="nav navbar-nav">
+            <li class=""><%= link_to "Travels", articles_path %></li>
+            <% if user_signed_in? %>
               <li class=""><%= link_to "Create Travel", new_article_path %></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>
                   <%= link_to user_path(current_user.id) do %>
-                    <span class="glyphicon glyphicon-log-in">　My Page</span>
+                    <span class="glyphicon glyphicon-user">　My Page</span>
                   <% end %>
                 </li>
                 <li>
                   <%= link_to destroy_user_session_path, method: :delete do %>
-                    <span class="glyphicon glyphicon-log-in">　Sign Out</span>
+                    <span class="glyphicon glyphicon-log-out">　Sign Out</span>
                   <% end %>
                 </li>
             </ul>
@@ -35,7 +34,7 @@
               </li>
               <li>
                 <%= link_to new_user_registration_path do %>
-                  <span class="glyphicon glyphicon-user">　Sign Up</span>
+                  <span class="glyphicon glyphicon-pencil">　Sign Up</span>
                 <% end %>
               </li>
             </ul>

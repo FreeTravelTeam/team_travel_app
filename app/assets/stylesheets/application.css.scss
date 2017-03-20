@@ -21,7 +21,7 @@
 
 *{
 	margin: 0;
-	paddeing: 0;
+	padding: 0;
 }
 body{
 	margin: 0;
@@ -53,11 +53,6 @@ body{
 /*articles show action*/
 
 /*session画面*/
-.log-sec:before{
-	content: "";
-	background: inherit;
-	filter: blur(10px);
-}
 .log-sec{
 	margin: 0;
 	height: 100vh;
