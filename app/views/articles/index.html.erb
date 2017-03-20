@@ -1,34 +1,9 @@
 <%= render 'header' %>
-<!-- 検索フォーム -->
-<div class="form_group container">
-  <%= search_form_for @search do |f| %>
-    <p class="search-form">
-      <%= f.label :country_eq, "タイトル検索" %>
-      <%= f.text_field :country_eq, class: "form-control", placeholder: "国名" %>
-    </p>
+<!-- 検索フォーム --><!-- Trigger the modal with a button -->
 
-    <p class="search-form">
-    	<%= f.label :region_cont, "地域で検索" %>
-    	<%= f.text_field :region_cont, class: "form-control", placeholder: "地域名" %>
-    </p>
 
-    <p class="search-form">
-      <%= f.label :price, "予算で検索" %>
-      <%= f.text_field :price_lt, class: "form-control", placeholder: "¥" %>
-    </p>
-
-    <p class="search-btn">
-    	<%= f.submit '検索', class: "btn btn-primary" %>
-		<%= link_to 'クリア', url_for, class: "btn btn-default" %>
-    </p>
-	
-
-  <% end %>
-</div>
-
-<!-- Trigger the modal with a button
-<!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" style="display: block;" data-target="#myModal">Open Search</button> -->
-
+<!-- Trigger the modal with a button -->
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
 <!-- Modal -->
 <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
@@ -39,16 +14,16 @@
         <button type="button" class="close" data-dismiss="modal">&times;</button>
         <h4 class="modal-title">Search</h4>
       </div>
-      <%= search_form_for @search do |f| %>
+      <%= search_form_for(@search, method: :get) do |f| %>
       <div class="modal-body">
         <p class="search-form">
-          <%= f.label :country_eq, "タイトル検索" %>
-          <%= f.text_field :country_eq, class: "form-control", placeholder: "国名" %>
+          <%= f.label :title_cont, "タイトル検索" %>
+          <%= f.text_field :title_cont, class: "form-control", placeholder: "タイトル" %>
         </p>
       </div>
       <div class="modal-body">
         <p class="search-form">
-          <%= f.label :region_cont, "地域で検索" %>
+          <%= f.label :region_cont, "場所で検索" %>
           <%= f.text_field :region_cont, class: "form-control", placeholder: "地域名" %>
         </p>
       </div>

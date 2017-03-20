@@ -38,6 +38,8 @@ gem 'hirb'
 gem 'pry'
 gem 'font-awesome-rails'
 
+gem 'ckeditor'
+
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
