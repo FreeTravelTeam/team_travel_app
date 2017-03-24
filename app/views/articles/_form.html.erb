@@ -52,23 +52,23 @@
   	</p>
     <p>
       <%= f.label :price %>
-      <%= f.text_field :price %>
+      ：¥<%= f.number_field :price, placeholder: "10000" %>
     </p>
 		<p>
 			<%= f.label :country %>
-			<%= f.text_field :country %>
+			<%= f.text_field :country, placeholder: "JAPAN" %>
 		</p>
 		<p>
 			<%= f.label :reion %>
-			<%= f.text_field :region %>
+			<%= f.text_field :region, placeholder: "TOKYO" %>
 		</p>
 		<p>
 			<%= f.label :safety_info %>
-			<%= f.text_field :safety_info %>
+			<%= f.text_field :safety_info, placeholder: "タクシーのぼったくりに注意！..." %>
 		</p>
 		<p>
 			<%= f.label :travel_item %>
-			<%= f.text_field :travel_item %>
+			<%= f.text_field :travel_item, placeholder: ""%>
 		</p>
 
 		<p>

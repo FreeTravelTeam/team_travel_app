@@ -17,3 +17,50 @@
 //= require_tree ../../../vendor/assets/javascripts/.
 //= require social-share-button
 //= require bootstrap-sprockets
+$(function() {
+    var topBtn = $('#page-top');    
+    topBtn.hide();
+    //スクロールが100に達したらボタン表示
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 40) {
+            topBtn.fadeIn();
+        } else {
+            topBtn.fadeOut();
+        }
+    });
+    //スクロールしてトップ
+    topBtn.click(function () {
+        $('body,html').animate({
+            scrollTop: 900
+        }, 500);
+        return false;
+    });
+});
+
+$(function () {
+    setTimeout('rect()'); //アニメーションを実行
+});
+
+function rect() {
+    $('#rect').animate({
+        marginTop: '-=10px'
+    }, 800).animate({
+        marginTop: '+=10px'
+    }, 800);
+    setTimeout('rect()', 1600); //アニメーションを繰り返す間隔
+}
+
+$(document).ready(function() {
+    var top_sec_sentences = $('.top-sec-sentences');
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 850) {
+            top_sec_sentences.fadeIn();
+        } else {
+            top_sec_sentences.fadeOut();
+        }
+    });
+    top_sec_sentences.click(function () {
+        $('body, html').animate({ scrollTop: 0 }, 500);
+        return false;
+    });
+});

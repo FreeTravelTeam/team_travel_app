@@ -1,25 +1,40 @@
-    <div class="parallax-window" data-parallax="scroll" data-image-src="<%= asset_path "test1.jpg" %>"></div>
+ <div class="articles-top container">
+ 	<div class="low">
+    	<div class="parallax-window-top" data-parallax="scroll" data-image-src="<%= asset_path "london.jpg" %>">
+     		<div class="top-title col-md-6">receldo</div>
+     	</div>
+    </div>
+	<section class="top-sec">
+		<div class="page-top-scroll">
+			<p id="page-top"><a href="#wrap">See more</a></p>
+				<div id="content">
+					<i id="rect" class="fa fa-arrow-circle-o-down" aria-hidden="true"></i>
+				</div>
+			</div>
+		</section>
+	<div class="parallax-window" data-parallax="scroll" data-image-src="<%= asset_path "prague.jpg" %>"></div>
 
 	<section class="top-sec">
-
+		<div class="top-sec-sentences">
+			<a href="#xxx">Souvenir story</a>
+			<p class="top-sec-sentence">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.
+			</p>
+		</div>
 	</section>
 
-	<div class="parallax-window" data-parallax="scroll" data-image-src="<%= asset_path "test2.jpg" %>"></div>
+	<div class="parallax-window" data-parallax="scroll" data-image-src="<%= asset_path "krakow.jpg" %>"></div>
 
 	<section class="top-sec">
-		
 	</section>
 
-	<div class="parallax-window" data-parallax="scroll" data-image-src="<%= asset_path "test3.jpg" %>"></div>
+	<div class="parallax-window" data-parallax="scroll" data-image-src="<%= asset_path "night.jpg" %>"></div>
 
 	<section class="top-sec">
-		
+		  <ul>
+              <li><%= link_to "Travels", articles_path %></li>
+              <li><%= link_to "Sign In", new_user_session_path %></li>
+              <li><%= link_to "Sign Up", new_user_registration_path %></li>
+          </ul>
 	</section>
-
-	<div class="parallax-window" data-parallax="scroll" data-image-src="<%= asset_path "test4.jpg" %>"></div>
-
-	<section class="top-sec">
-		
-	</section>
-
-	<div class="parallax-window" data-parallax="scroll" data-image-src="<%= asset_path "test5.jpg" %>"></div>
+	<div class="parallax-window" data-parallax="scroll" data-image-src="<%= asset_path "clouds.jpg" %>"></div>
+</div>
