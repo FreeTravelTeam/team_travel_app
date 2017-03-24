@@ -7,8 +7,15 @@ class ArticlesController < ApplicationController
 
 	def index
 		@articles = Article.all.order("id DESC")
-		@search = Article.ransack(params[:q])
-		@articles = @search.result(distinct: true)
+		if params[:title].present?
+      		@articles = @articles.get_title params[:title]
+    	end
+    	if params[:country].present?
+      		@articles = @articles.get_country params[:country]
+    	end
+    	if params[:price].present?
+      		@articles = @articles.get_price params[:price]
+    	end
 		@articles = Article.page(params[:page]).per(12)
 	end
 

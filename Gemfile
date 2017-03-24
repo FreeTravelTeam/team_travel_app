@@ -30,12 +30,12 @@ gem 'rmagick'
 
 gem 'devise'
 
-gem 'ransack'
+# gem 'ransack'
 
 gem 'social-share-button'
 
 gem 'hirb'
-gem 'pry'
+# gem 'pry'
 gem 'font-awesome-rails'
 
 gem 'ckeditor'
