@@ -1,6 +1,5 @@
-
 <%= render 'articles/header' %>
-<h2>個人ページ</h2>
+<h2>My Page</h2>
 
 <li>
  <div class="text">自分の投稿した記事</div>
@@ -11,8 +10,8 @@
     <%= article.likes.count %>
  <% end %>
  <li>
-  <%= link_to likes_user_path(@user.id) do %>
-   <div class="text">いいねした記事</div>
+  <div class="text">いいねした記事</div>
+  <%= link_to like_user_path(@user.id) do %>
    <div class="num"><%= @user.likes.count %></div>
   <% end %>
  </li>

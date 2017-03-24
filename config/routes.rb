@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   resources :users, only:[:show, :index]
   resources :comments, only:[:create]
+  
+  get '/like/article/:id' => 'users#likes', as: :like_user 
 
   root 'articles#top'
 
