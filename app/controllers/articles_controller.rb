@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
-    
     before_action :set_article, only: [:destroy, :show, :edit, :update]
+    before_action :authenticate_user!, only:[:new, :edit]
 
 	def top
 	end
