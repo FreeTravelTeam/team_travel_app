@@ -1,3 +1,4 @@
+
 <div class="form-wrapper">
   <div class="create-title">
     <h1>Create Story</h1> 
@@ -52,12 +53,12 @@
       			<%= f.text_field :region, placeholder: "東京" %>
       		</p>
       		<p>
-      			<%= f.label :safety_info %>
-      			<%= f.text_field :safety_info, placeholder: "平和" %>
-      		</p>
-      		<p>
       			<%= f.label :travel_item %>
       			<%= f.text_field :travel_item, placeholder: "地図、etc" %>
+      		</p>
+      		<p>
+      			<%= f.label :safety_info, "これから行く人へ一言" %>
+      			<%= f.text_field :safety_info, placeholder: "行ってらっしゃい！！" %>
       		</p>
         </div>
       </div>

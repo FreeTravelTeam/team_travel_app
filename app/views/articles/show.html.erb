@@ -1,54 +1,73 @@
- 
  <%= render 'header' %>
- <div class="show-sec">
 
-<div class="container">
-	<div class="show-img">
-		<div class="thumbnail article_show_img">
-		<%= image_tag @article.image, class: "article_show_img", :alt => 'Lights', :width => '100%' %>
-			<div class="caption">
-				<p class="article_show_name"><%= link_to @user.name, user_path(@article.user_id) %></p>
-				<h2 class="article_show_title"><%= @article.title %></h2>
+ <hr>
+<div class="show-wrapper container">
+	<section class="show_article row">
+		<div class="show_side-article col-sm-3">
+			<div class="show_side-username">
+				<p class="show_username"><%= link_to @user.name, user_path(@user.id) %>
+				</p>
+			</div>
+			<div class="arrow_box">
+				Info!
+			</div>
+			<div class="show_side-info" style="margin-top: 20px;">
+				<span class="infotitle">場所</span>
+				<p><%= @article.country %>,<%= @article.region %></p>
+			</div>
+			<div class="show_side-info">
+				<span class="infotitle">予算</span>
+				<p><%= @article.price %>¥</p>
+			</div>
+			<div class="show_side-info">
+				<span class="infotitle">日にち</span>
+				<p><%= @article.from_date %></p>
+			</div>
+			<div class="show_side-info">
+				<span class="infotitle">重要な持ち物</span>
+				<p><%= @article.travel_item %></p>
+			</div>
+			<div class="show_side-info">
+				<span class="infotitle">これから行く人へ一言</span>
+				<p><%= @article.safety_info %></p>
+			</div>
+				<%= render 'likes/like', article: @article %>　
+				<% if @article.user_id == current_user.id %>
+					<%= link_to edit_article_path(@article.id) do %>
+					<span class="glyphicon glyphicon-pencil" style="font-size: 25px;"></span>　
+					<%= link_to article_path(@article.id), method: :delete, "data-confirm" => "Are you sure?" do %>
+					<span class="glyphicon glyphicon-trash" style="font-size: 25px;"></span>
+					<% end %>
+					<% end %>
+				<% end %>
+				<div class="arrow_box">
+				Share!
+				</div>
+			<p class="show_share-btn">
+				<h3>
+				<%= social_share_button_tag(@article.id) %>
+				</h3>
+			</p>
+		</div>
+		<div class="show_body-article col-sm-9">
+			<div class="show_body">
+				<h1 class="show_body-title"><%= @article.title %>
+				</h1>
+				<span class="cre-time"><%= @article.updated_at %>
+				</span>
+				<div class="show_article-img">
+				<%= image_tag @article.image, class: "article_show_img" %>
+				</div>
+				<div class="show_body-body">
+					<p class="body-body">
+					<%= @article.body.html_safe %>
+					</p>
+				</div>
 			</div>
 		</div>
-		<div class="container">
-  			<div class="jumbotron">
-				<h2>body</h2>
-					<p><%= @article.body.html_safe %></p>
-
-				<h2>出発日</h2>
-					<p><%= @article.from_date %></p>
-
-				<h2>Country</h2>
-					<p><%= @article.country %></p>
-
-				<h2>Reigon</h2>
-					<p><%= @article.region %></p>
-
-				<h2>Safety into</h2>
-					<p><%= @article.safety_info %></p>
-
-				<h2>Travel item</h2>
-					<p><%= @article.travel_item %></p>
-
-				<button class="btn warning"><%= link_to "Edit", edit_article_path(@article.id), class: "index-sub-title" %></button>
-
-				<div id="like-buttons">
-					<%= render 'likes/like', article: @article %>
-				</div>
-			</div>	
-		</div>
-	 </div>
+	</section>
 </div>
 
- <div class="gmap">
-   <iframe
-  width="600"
-  height="450"
-  frameborder="0" style="border:0"
-  src="https://www.google.com/maps/embed/v1/serach?key=AIzaSyAyHQX_d8q6rzfpLcV4KHHtOvvtSYT8SSU
-    &q=Space+Needle,Seattle+WA" allowfullscreen>
-</iframe>
- </div>
 
-<%= social_share_button_tag(@article.id) %>
+
+

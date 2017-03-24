@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   resources :comments, only:[:create]
 
   get 'search/index' => 'articles#index', as: :search
-
   root 'articles#top'
 
 end
