@@ -3,71 +3,55 @@
 
 
 <!-- Trigger the modal with a button -->
-<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-search"></span></button>
-<!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Search</h4>
-      </div>
-      <%= form_tag(search_path, method: :get) do %>
-      <div class="modal-body">
-        <p class="search-form">
-          タイトル検索<br>
-          <%= text_field_tag :title %>
-        </p>
-      </div>
-      <div class="modal-body">
-        <p class="search-form">
-          国で検索<br>
-          <%= text_field_tag :country %>
-        </p>
-      </div>
-      <div class="modal-body">
-        <p class="search-form">
-          予算で検索<br>
-          <%= text_field_tag :price %>
-        </p>
-      </div>
-      <div class="modal-footer">
-        <p class="search-btn">
-          <%= submit_tag '検索', class: "btn btn-default" %>
-        </p>
-      </div>
-      <% end %>
-    </div>
-  </div>
-</div>
+
 
 <!-- 一覧セクション -->
-<div class="paginate"><%= paginate @articles %></div>
-<div class="container col-md-12">
-      <% @articles.each do |article| %>
-         <div class="thumbnail col-lg-3 index_thumbnail">
-		       <%= link_to article_path(article.id) do %>
-		        <%= image_tag article.image, class: "img", :alt => 'Lights', :width => '100%' %>
-			       <% end %>
-                <div class="caption">
-                  <p class="index-title"> 
-                   <%= link_to article.title, article_path(article.id), class: "index-title vh"%>
-                  </p>
-		              <div class="index-sub-title">
-                    <button class="btn warning"><%= link_to "さらに表示", article_path(article.id), class: "index-sub-title" %></button>
-                    <i class="fa fa-heart"></i>
-                    <%= article.likes.count %>
-                  </div> 
-                </div>
-          </div>
-      <% end %>
-  </div>
- </div>
+<hr>
+<section class="index-sec clearfix">
+	<div class="index-wrapper1 container">
+		<div class="row">
+		<% @articles.each do |article| %>
+			<div class="col-md-3 col-xs-12 ind-box">
+				<p class="index-img"><%= image_tag article.image, class: "i-img" %></p>
+				<div class="index-cont">
+					<h3 class="ind-title"><%= article.title %></h3>
+					<p class="ind-title">-　<%= article.region %></p>
+					<p class="ind-title">-　￥<%= article.price %></p>
+					<%= link_to article_path(article) do %>
+					<span class="btn btn-default">Read More</span>
+					<% end %>
+				</div>
+			</div>
+		<% end %>
+		</div>
+	</div>
+	<div class="index-wrapper2">
+		<div class="search">
+			
+		</div>
+		<div class="arrow_box">
+				最新の記事
+		</div>
+		<% @new_articles.each do |article| %>
+			<div class="new-inde clearfix">
+				<p class="index-img2"><%= image_tag article.image, class: "n-img" %></p>
+				<div class="index-cont2">
+					<h4 class="ind-title"><%= article.title %>
+					</h4>
+					<p class="ind-title2">-　<%= article.region %></p>
+					<p class="ind-title2">-　￥<%= article.price %></p>
+					<%= link_to article_path(article) do %>
+					<span class="btn-md btn-default">Read More</span>
+					<% end %>
+				</div>
+			</div>
+		<% end %>
+	</div>
+	
+</section>
 
 
-
-<div class="paginate col-md-12"><%= paginate @articles %></div>
+<%= paginate @articles %>
   
 
 
