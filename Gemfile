@@ -27,15 +27,16 @@ gem 'bootstrap-sass'
 
 gem 'carrierwave'
 gem 'rmagick'
+gem 'mini_magick'
 
 gem 'devise'
 
-gem 'ransack'
+# gem 'ransack'
 
 gem 'social-share-button'
 
 gem 'hirb'
-gem 'pry'
+# gem 'pry'
 gem 'font-awesome-rails'
 
 gem 'ckeditor'

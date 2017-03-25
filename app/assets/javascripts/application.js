@@ -12,12 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
-
-
 //= require_tree ../../../vendor/assets/javascripts/.
 //= require social-share-button
 //= require bootstrap-sprockets
 //= require ckeditor/init
+<<<<<<< HEAD
 
 $(function() {
     var topBtn = $('#page-top');    

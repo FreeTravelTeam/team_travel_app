@@ -1,14 +1,21 @@
 class ArticlesController < ApplicationController
-    
     before_action :set_article, only: [:destroy, :show, :edit, :update]
+    before_action :authenticate_user!, only:[:new, :edit]
 
 	def top
 	end
 
 	def index
 		@articles = Article.all.order("id DESC")
-		@search = Article.ransack(params[:q])
-		@articles = @search.result(distinct: true)
+		if params[:title].present?
+      		@articles = @articles.get_title params[:title]
+    	end
+    	if params[:country].present?
+      		@articles = @articles.get_country params[:country]
+    	end
+    	if params[:price].present?
+      		@articles = @articles.get_price params[:price]
+    	end
 		@articles = Article.page(params[:page]).per(12)
 	end
 

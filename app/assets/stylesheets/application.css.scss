@@ -19,6 +19,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
 *{
 	margin: 0;
 	padding: 0;
@@ -33,109 +34,3 @@ body{
 	display: block;
 	clear: both;
 }
-
-
-/*render-header*/
-#header{
-	padding-bottom: 100px;
-}
-.navbar-default{
-	width: 100%;
-	position: fixed;
-	z-index: 10;
-}
-
-/*article index action*/
-/*.index-container*/
-
-
-/*article new action*/
-
-/*articles show action*/
-
-/*session画面*/
-.log-sec{
-	margin: 0;
-	height: 100vh;
-	background-image: image-url("diary_book.jpg");
-	background-size: cover;
-
-		.login-box{
-			width: 50%;
-			height: 500px;
-			margin: auto;
-			color: #696969;
-			padding-top: 70px;
-
-			.login{
-				width: 65%;
-				margin: 60px auto;
-				padding: 25px 45px 30px;
-				background-color: lighten(#bfbec5, 15%);
-				border-radius: 20px;
-				box-shadow: 5px 5px;
-
-				.app-logo{
-					display: block;
-					height: 55px;
-					width: 90%;
-					margin: 0 auto;
-					margin-bottom: 30px;
-				}
-
-				.field{
-					padding-top: 20px;
-				}
-				.ren-link{
-					border-bottom: dotted 2px #d4d9d6;
-					padding-bottom: 20px;
-				}
-			}
-		}
-}
-
-/*article-form*/
-.form-wrapper{
-	width: 85%;
-	margin: 40px auto;
-	border-radius: 30px;
-	background-color: lighten( #ffe9a9, 13%);
-	box-shadow: 5px 5px;
-	color: #333;
-}
-
-.create-title{
-	text-align: center;
-	font-family: 'Ranga', cursive;
-	opacity: 0.8;
-	padding: 50px 0 30px;
-}
-
-.main-article-form{
-	margin: 10px auto;
-}
-
-.form-infoarea .form-bodyarea{
-	height: 500px;
-
-		p{
-			width: 90%;
-			margin: 7px auto;
-		}
-		.article-submit{
-			text-align: center;
-		}
-}
-
-
-
-
-
-
-
-
-
-
-
-
-

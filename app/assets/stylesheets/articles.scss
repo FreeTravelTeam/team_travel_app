@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+
 //共通ヘッダー
 
 //topページ
@@ -165,6 +166,37 @@
 	transform: scale(1.05);
 }
 
+.navbar-default{
+	width: 100%;
+	position: fixed;
+	z-index: 10;
+}
+
+/*render.article-form*/
+
+.form-wrapper{
+	width: 75%;
+	margin: 40px auto;
+	padding: 0 20px 60px;
+	border-radius: 30px;
+	background-color: lighten( #9e9e9e, 30%);
+	box-shadow: 5px 5px;
+	color: gray;
+}
+
+.create-title{
+	text-align: center;
+	font-family: 'Ranga', cursive;
+	opacity: 0.8;
+	padding: 50px 0 20px;
+}
+
+.main-article-form{
+	margin: 10px auto;
+}
+
+
+
 //indexページ
 
 	.head-nav-bar{
@@ -194,7 +226,7 @@
 	}
 	
 	.index_thumbnail{
-		overflow: scroll;   /* スクロール表示 */ 
+		overflow: scroll;
   		width: 100px;
  		height: 400px;
 		margin: 30px;
@@ -217,18 +249,91 @@
 
 
 //article_showページ
+/*吹き出し*/
+.arrow_box {
+	position: relative;
+	padding: 5px;
+	margin: 35px auto 5px;
+	text-align: center;
+	color: white;
+	background: #1d1f42;
+	border: 1px solid #fffaf7;
+}
+.arrow_box:after, .arrow_box:before {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
 
-	.show-sec{
-		text-align: center;
-	}
+.arrow_box:after {
+	border-color: rgba(29, 31, 66, 0);
+	border-top-color: #1d1f42;
+	border-width: 8px;
+	margin-left: -8px;
+}
+.arrow_box:before {
+	border-color: rgba(255, 250, 247, 0);
+	border-top-color: #fffaf7;
+	border-width: 9px;
+	margin-left: -9px;
+}
 
-	.article_show_img{
-		margin: 0 auto;
-		width: 500px;
-		height: auto;
-	}
+.show_side-username{
+	font-size: 25px;
+}
+.show_side-article{
+	padding: 18px 10x;
 
-	.article_show_title{
-		color: #696969;
+	.show_side-info{
+		padding: 7px 0;
+		font-size: 15px;
 	}
+	.show_share-btn {
+		width: 30%;
+		margin: 20px auto;
+	}
+}
+
+.show_body{
+	width: 90%;
+	margin: 10px auto;
+
+	.show_body-title{
+		padding: 0 5px 15px;
+		margin-top: 0;
+		color: black;
+		font-weight: bold;	
+	}
+	.cre-time{
+		padding: 5px;
+		color: white;
+		background: #1d1f42;
+		border: 1px solid #5a4498;
+	}
+	.show_article-img{
+		padding: 15px 0;
+	}
+	.show_body-body{
+		border-top: solid #e6e6e6 4px;
+		border-bottom: solid #e6e6e6 4px;
+		height: 900px;
+		overflow: scroll;
+
+		.body-body{
+			width: 95%;
+			margin: 10px auto;
+		}
+	}
+}
+
+
+
+
+
+
 
