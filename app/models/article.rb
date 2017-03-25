@@ -3,7 +3,7 @@ class Article < ApplicationRecord
 
 	belongs_to :user
 	has_many :likes, dependent: :destroy
-	has_many :images
+
 
 	validates :image, presence: { message: 'は、必須項目です。' }
 	validates :title, presence: { message: 'は、必須項目です。' }
