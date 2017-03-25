@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   devise_for :users
   resources :articles do
@@ -6,7 +7,7 @@ Rails.application.routes.draw do
   end
 
   resources :users, only:[:show, :index]
-  resources :comments, only:[:create]
+  resources :images, only:[:create, :destroy]
 
   get 'search/index' => 'articles#index', as: :search
   root 'articles#top'

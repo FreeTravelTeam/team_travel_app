@@ -27,6 +27,7 @@ gem 'bootstrap-sass'
 
 gem 'carrierwave'
 gem 'rmagick'
+gem 'mini_magick'
 
 gem 'devise'
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170314163035) do
+ActiveRecord::Schema.define(version: 20170325042311) do
 
   create_table "articles", force: :cascade do |t|
     t.text     "body"
@@ -23,19 +23,21 @@ ActiveRecord::Schema.define(version: 20170314163035) do
     t.text     "safety_info"
     t.text     "travel_item"
     t.integer  "user_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-    t.integer  "likes_count"
-    t.integer  "like_user_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.string   "title"
   end
 
-  create_table "comments", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "article_id"
-    t.text     "body"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table "ckeditor_assets", force: :cascade do |t|
+    t.string   "data_file_name",               null: false
+    t.string   "data_content_type"
+    t.integer  "data_file_size"
+    t.string   "type",              limit: 30
+    t.integer  "width"
+    t.integer  "height"
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.index ["type"], name: "index_ckeditor_assets_on_type"
   end
 
   create_table "likes", force: :cascade do |t|
