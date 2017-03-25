@@ -29,7 +29,7 @@ body{
 	padding: 0;
 	color: #696969;
 }
-.clearfix{
+.clearfix:after{
 	content: "";
 	display: block;
 	clear: both;
