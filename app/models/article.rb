@@ -4,7 +4,6 @@ class Article < ApplicationRecord
 	belongs_to :user
 	has_many :likes, dependent: :destroy
 
-
 	validates :image, presence: { message: 'は、必須項目です。' }
 	validates :title, presence: { message: 'は、必須項目です。' }
 	validates :body, presence: { message: 'は、必須項目です。' }
@@ -18,7 +17,7 @@ class Article < ApplicationRecord
 		where("title like ?", "%#{country}%").order(id: "DESC")
 	}
 	scope :get_price, -> (price){
-		where("price < ?", "%{price}").order(id: "DESC")
+		where("price < ?", "#{price}").order(id: "DESC")
 	}
 
   	def like_user?(user_id)

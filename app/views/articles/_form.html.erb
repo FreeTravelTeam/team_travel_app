@@ -20,7 +20,7 @@
       		<%= f.label :MainImage, "MainImage(一覧に表示されます)" %>
       		<%= f.file_field :image %>
       	</p>
-      	<p><%= f.label :from_date, 'Start' %>
+      	<p><%= f.label :from_date, 'Start' %><br>
            <%= raw sprintf(
             f.datetime_select(
                :from_date,# プロパティ名
@@ -28,14 +28,14 @@
                 start_year:     Time.zone.now.prev_year.year,# 選択可能な開始年
                 end_year:       Time.zone.now.next_year.year,# 選択可能な終了年
                 default:        Time.zone.now,# デフォルトの年
-                use_two_digit_numbers: true,# 月日を2桁の値で表示
-                date_separator: '%s',# 年, 月
+                #use_two_digit_numbers: true,# 月日を2桁の値で表示
+                #date_separator: '%s',# 年, 月
                 #datetime_separator: '%s',# 日
                 #time_separator: '%s'# 時
               },# オプション
               { class: 'date-select' }# htmlオプションを指定する場合は別で指定
             ),
-            '年 ', '月 ', '日 ') #'時 ') + '分'# 分 は最後につけ加えられる
+            '年 ', '月 ', '日 ', '時') + '分'# 分 は最後につけ加えられる
            %>
         	</p>
           <p>
@@ -49,7 +49,7 @@
       			<%= f.text_field :country, placeholder: "日本" %>
       		</p>
       		<p>
-      			<%= f.label :reion %>
+      			<%= f.label :region %>
       			<%= f.text_field :region, placeholder: "東京" %>
       		</p>
       		<p>

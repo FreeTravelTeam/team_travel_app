@@ -6,7 +6,8 @@ class ArticlesController < ApplicationController
 	end
 
 	def index
-		@articles = Article.all.order("id DESC")
+		@articles = Article.all.order("RANDUM()")
+		@new_articles = Article.last(4)
 		if params[:title].present?
       		@articles = @articles.get_title params[:title]
     	end

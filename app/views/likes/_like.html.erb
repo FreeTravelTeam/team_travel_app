@@ -6,7 +6,7 @@
     <% end %>
   <% else %>
     <%= link_to article_likes_path(article.id), method: :post, id: "like-button", remote: true do %>
-    <i class="fa fa-heart-o fa-2x" ></i>
+    <i class="fa fa-heart-o fa-2x"></i>
     <% end %>
   <% end %>
-  <%= article.likes.count %>
+ 

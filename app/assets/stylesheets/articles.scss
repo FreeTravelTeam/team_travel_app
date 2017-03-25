@@ -2,10 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-
-//共通ヘッダー
-
 //topページ
 .parallax-window-top{
 	min-height: 710px;
@@ -50,6 +46,17 @@
 #page-top a:hover {
     text-decoration: none;
     background: #999;
+}
+
+
+/*共通ヘッダー*/
+#header{
+	padding-bottom: 80px;
+	.navbar-default{
+		width: 100%;
+		position: fixed;
+		z-index: 10;
+	}
 }
 
 #rect {
@@ -166,13 +173,7 @@
 	transform: scale(1.05);
 }
 
-.navbar-default{
-	width: 100%;
-	position: fixed;
-	z-index: 10;
-}
-
-/*render.article-form*/
+/*共通フォーム*/
 
 .form-wrapper{
 	width: 75%;
@@ -197,58 +198,61 @@
 
 
 
-//indexページ
+/*一覧ページ*/
+.ind-main-img{
+	width: 100%;
+	height: 550px;
+	opacity: .9;
+}
+.inde-title{
+	color: #c0c0c0;
+	font-weight: bold;
+}
+.index-sec{
+	width: 96%;
+	margin: 20px auto;
+	
 
-	.head-nav-bar{
+	.index-wrapper1{
+		float: left;
+		width: 70%;
 
-		.head-nav{
-			width: 100%;
-			margin: 20px;
-
-			li{
-				width: 100%;
-				list-style: none;
-			}
-				a{
-
-					text-decoration: none;
-				}
+		.i-img{
+			width: 200px;
+			height: 200px;
+			border-radius: 10px;
 		}
-	}	
-	
-	.index-title{
-		color: #a9a9a9;
-		font-size: 3vh;
-	}
-	
-	.index-sub-title{
-		color: white;
-	}
-	
-	.index_thumbnail{
-		overflow: scroll;
-  		width: 100px;
- 		height: 400px;
-		margin: 30px;
-	}
-	
-	.btn {
-    	border: none; /* Remove borders */
-    	color: white; /* Add a text color */
-    	padding: 14px 28px; /* Add some padding */
-    	cursor: pointer; /* Add a pointer cursor on mouse-over */
-	}
-	
-	.warning {
-		background-color: #66ffcc;
-	} /* Orange */
-
-	.warning:hover {
-		background: #e68a00;
 	}
 
+	.index-wrapper2{
+		float: left;
+		width: 30%;
 
-//article_showページ
+		.new-inde{
+			margin: 15px 0;
+			padding: 10px;
+			border-bottom: dotted gray 2px;
+			border-top: dotted #696969 2px;
+
+			.index-img2{
+				float: left;
+				width: 35%;
+
+				.n-img{
+					width: 120px;
+					height: 120px;
+				}
+			}
+			.index-cont2{
+				float: left;
+				width: 65%;
+			}
+		}
+	}
+}
+
+
+/*詳細ページ*/
 /*吹き出し*/
 .arrow_box {
 	position: relative;
@@ -298,7 +302,12 @@
 		margin: 20px auto;
 	}
 }
-
+.cre-time{
+		padding: 5px;
+		color: white;
+		background: #1d1f42;
+		border: 1px solid #5a4498;
+	}
 .show_body{
 	width: 90%;
 	margin: 10px auto;
@@ -308,12 +317,6 @@
 		margin-top: 0;
 		color: black;
 		font-weight: bold;	
-	}
-	.cre-time{
-		padding: 5px;
-		color: white;
-		background: #1d1f42;
-		border: 1px solid #5a4498;
 	}
 	.show_article-img{
 		padding: 15px 0;
@@ -330,9 +333,6 @@
 		}
 	}
 }
-
-
-
 
 
 
