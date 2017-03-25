@@ -3,14 +3,10 @@
        まだお気に入りされた投稿はありません。
    </div>
 <% end %>
-<% @user.likes.map { |l| l.article }.each do |article| %>
-   <h4 class="user">
-       <span class="user-email">
-           <link_to article.user.email,user_path(article.user) %>
-       </span>
+<h2>お気に入りした記事</h2>
+  <% @user.likes.map { |f| f.article }.each do |article| %>
     <span class="user-id"><%= article.user.email %></span>
-   </h4>
-   <div class="article-image">
-       <%= image_tag article.image.url %>
-   </div>
- <% end %>
+      <div class="article-image">
+         <%= image_tag article.image.url %>
+     </div> 
+  <% end %>
