@@ -1,18 +1,56 @@
+<div class="user-show">
+	<%= render 'articles/header' %>
+	 <div class="container">
+		<div class="low">
+		 	<div class="my-info col-md-4">
+			 	<h1>My page</h1>
+			 		<h3>NAME</h3>
+						 <div class="well well-lg"><%= @user.name %></div>
+					 <h3>Email</h3>
+					 <div class="well well-lg"><%= @user.email %></div>
+		 	</div>	
 
-<%= render 'articles/header' %>
-<h2>個人ページ</h2>
+		 	<div class="col-md-8">
+				<ul class="nav nav-tabs">
+	  					<li class="active users_show_text">
+	  						<a href="#tab1" data-toggle="tab" eria-expanded="true">自分の投稿した記事</a>
+		  				</li>
+		  				<li class="users_show_text">
+   							<a href="#tab2" data-toggle="tab" eria-expanded="false">いいねした記事</a>
+   						</li>
+  	 				<div class="tab-content">
+  	 				    <div class="col-md-4">
+   							<div class="tab-pane active" id="tab1">
+ 								<div class="nav-link">
+ 									<% @artcles.each do |article| %>
+   					 					<%= link_to article.title ,article_path(article.id) %>
+   			 								<%= image_tag article.image.url %>
+   										 	<i class="fa fa-heart"></i>
+  		  									<%= article.likes.count %>
+  		  							<% end %>
+ 								</div>
+ 							</div>
+ 						</div>
+ 						<div class="tab-pane" id="tab2">
+   							<% if @user.likes.empty? %>
+   								<div class="list-group-item">
+    								まだお気に入りした記事はありません。
+	  							</div>
+							<% end %>
+							<div class="liked-article">
+  								<% @user.likes.map { |f| f.article }.each do |article| %>
+    								<span class="user-id"><%= article.user.name %></span>
+      								<div class="article-image"><%= image_tag article.image.url %></div> 
+ 								<% end %>
+ 							</div>
+ 				  		 </div>
+ 					</div>
+   				</ul>
+   			</div>
+   		</div>
+   	</div>
+</div>
 
- 	<div class="users_show_text">自分の投稿した記事</div>
- 		<% @artcles.each do |article| %>
-   		 	<%= link_to article.title ,article_path(article.id) %>
-   		 		<%= image_tag article.image.url %>
-   			 <i class="fa fa-heart"></i>
-  	  		<%= article.likes.count %>
- 		<% end %>
- 		<%= link_to likes_user_path(@user.id) do %>
-   <div class="users_show_text">いいねした記事</div>
-   <div class="num"><%= @user.likes.count %></div>
-   <% end %>
 
     
 
