@@ -1,6 +1,6 @@
  <div class="articles-top">
  	<div class="container-fulid">
- 		<div class="low">
+ 		<div class="row">
   	  		<div class="parallax-window-top" data-parallax="scroll" data-image-src="<%= asset_path "london.jpg" %>">
      				<div class="top-title col-lg-6">receldo</div>
      			</div>
@@ -51,15 +51,16 @@
 						</div>
 					</div>
 				<div class="parallax-window" data-parallax="scroll" data-image-src="<%= asset_path "night.jpg" %>"></div>
-				<div class="top-sec row">
-					<% if user_signed_in? %>
-              			<div class="col-md-4"><%= link_to "Create Travel", new_article_path, class: "link-button" %></div>
-                		<div class="col-md-4"><%= link_to "My Page", user_path(current_user.id), class: "link-button" %></div>
-               			<div class="col-md-4"> <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "link-button"%></div>
-         			 <% else %>
-              			<div class="col-md-6"><%= link_to "Sign In", new_user_session_path, class: "link-button" %></div>
-                		<div class="col-md-6"><%= link_to "Sign Up", new_user_registration_path, class: "link-button" %></div>
-        		 	 <% end %>
+				<div class="top-sec third row">
+					
+						<% if user_signed_in? %>
+              				<div class="col-md-4 logout-user"><%= link_to "Create Travel", new_article_path, class: "link-button" %></div>
+                			<div class="col-md-4 logout-user"><%= link_to "My Page", user_path(current_user.id), class: "link-button" %></div>
+               				<div class="col-md-4 logout-user"> <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "link-button"%></div>
+         				 <% else %>
+              				<div class="col-md-6 login-user"><%= link_to "Sign In", new_user_session_path, class: "link-button" %></div>
+                			<div class="col-md-6 login-user"><%= link_to "Sign Up", new_user_registration_path, class: "link-button" %></div>
+        			 	 <% end %>
 		  		</div>
 		<div class="parallax-window" data-parallax="scroll" data-image-src="<%= asset_path "clouds.jpg" %>"></div>
 	</div>

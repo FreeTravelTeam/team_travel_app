@@ -1,55 +1,52 @@
-<div class="user-show">
+
 	<%= render 'articles/header' %>
 	 <div class="container">
-		<div class="low">
-		 	<div class="my-info col-md-4">
-			 	<h1>My page</h1>
-			 		<h3>NAME</h3>
-						 <div class="well well-lg"><%= @user.name %></div>
-					 <h3>Email</h3>
-					 <div class="well well-lg"><%= @user.email %></div>
-		 	</div>	
-
-		 	<div class="col-md-8">
+		<div class="row">
+		 	<div class="my-info col-md-3">
+		 		<h1>My page</h1>
+		 	  	<h3 class="panel-heading">NAME</h3>
+			 	<h4 class="well"><%= @user.name %></h4>
+				<h3 class="panel-heading">Email</h3>
+				<h4 class="well"><%= @user.email %></h4>
+		 	</div>
+		 	<div class="col-md-9">
 				<ul class="nav nav-tabs">
-	  					<li class="active users_show_text">
-	  						<a href="#tab1" data-toggle="tab" eria-expanded="true">自分の投稿した記事</a>
-		  				</li>
-		  				<li class="users_show_text">
-   							<a href="#tab2" data-toggle="tab" eria-expanded="false">いいねした記事</a>
-   						</li>
-  	 				<div class="tab-content">
-  	 				    <div class="col-md-4">
-   							<div class="tab-pane active" id="tab1">
- 								<div class="nav-link">
- 									<% @artcles.each do |article| %>
-   					 					<%= link_to article.title ,article_path(article.id) %>
-   			 								<%= image_tag article.image.url %>
-   										 	<i class="fa fa-heart"></i>
-  		  									<%= article.likes.count %>
-  		  							<% end %>
- 								</div>
- 							</div>
- 						</div>
- 						<div class="tab-pane" id="tab2">
-   							<% if @user.likes.empty? %>
-   								<div class="list-group-item">
-    								まだお気に入りした記事はありません。
-	  							</div>
-							<% end %>
-							<div class="liked-article">
-  								<% @user.likes.map { |f| f.article }.each do |article| %>
-    								<span class="user-id"><%= article.user.name %></span>
-      								<div class="article-image"><%= image_tag article.image.url %></div> 
- 								<% end %>
- 							</div>
- 				  		 </div>
- 					</div>
+	  				<li class="users_show_text active"><a data-toggle="tab" href="#tab1">自分の投稿した記事</a></li>
+		  			<li class="users_show_text"><a data-toggle="tab" href="#tab2">いいねした記事</a></li>
    				</ul>
+  	 			<div class="tab-content" style="height: 800px;">
+  	 				<div class="tab-pane fade in active" id="tab1">
+	  	 				<div class="row">
+	 						<% @artcles.each do |article| %>
+	 							<div class="col-md-4">
+	   					 			<p><%= link_to article.title ,article_path(article.id) %></p>
+	   			 					<div><%= image_tag article.image.url %></div>
+	  		  						<p><i class="fa fa-heart"></i><%= article.likes.count %></p>
+	  		  					</div>
+	  		  				<% end %>
+	 					</div>
+ 					</div>
+ 					<div class="tab-pane fade" id="tab2">
+ 						<div class="no-article row">
+   							<% if @user.likes.empty? %>
+   								<div class="list-group-item col-md-12">
+    							まだお気に入りした記事はありません。
+	  							</div>
+	  						<% else %>
+		  						<% @user.likes.map { |f| f.article }.each do |article| %>
+	      							<div class="article-image col-md-6">
+	      							<%= image_tag article.image.url, class: "users-like-img" %>
+	      							<%= article.user.name %>
+	      							</div> 
+	 							<% end %>
+							<% end %>
+						</div>
+	 				</div>
+ 				</div>
    			</div>
    		</div>
    	</div>
-</div>
+
 
 
     

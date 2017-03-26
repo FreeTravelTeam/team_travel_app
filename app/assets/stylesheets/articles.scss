@@ -151,7 +151,8 @@
   transition: all .2s ease-in-out;
 }
 .link-button {
-	margin: 10px;
+	margin: 17px;
+	margin-left: 150px;
 	display: inline-block;
 	text-align: center;
 	text-decoration: none;
@@ -172,6 +173,16 @@
 	z-index: 10;
 }
 
+.third{
+	height: 88px;
+}
+
+.login-user{
+	margin: 0 auto;
+}
+.logout-user{
+	margin: 0 auto;
+}
 /*render.article-form*/
 
 .form-wrapper{
@@ -194,8 +205,6 @@
 .main-article-form{
 	margin: 10px auto;
 }
-
-
 
 //indexページ
 
