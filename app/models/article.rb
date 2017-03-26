@@ -17,7 +17,7 @@ class Article < ApplicationRecord
 		where("title like ?", "%#{country}%").order(id: "DESC")
 	}
 	scope :get_price, -> (price){
-		where("price < ?", "#{price}").order(id: "DESC")
+		where("price <= ?", "#{price}").order(id: "DESC")
 	}
 
   	def like_user?(user_id)
