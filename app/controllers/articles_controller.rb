@@ -17,7 +17,7 @@ class ArticlesController < ApplicationController
     	if params[:price].present?
       		@articles = @articles.get_price params[:price]
     	end
-		@new_articles = Article.order("updated_at DESC")
+		@new_articles = Article.limit(4).order("updated_at DESC")
 	end
 
 	def new

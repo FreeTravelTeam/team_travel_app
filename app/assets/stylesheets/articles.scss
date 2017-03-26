@@ -162,6 +162,7 @@ $fukidasi-cl: #1d1f42;
 .link-button {
 	margin: 17px;
 	margin-left: 150px;
+	border-radius: 4px;
 	display: inline-block;
 	text-align: center;
 	text-decoration: none;
@@ -232,6 +233,10 @@ $fukidasi-cl: #1d1f42;
 	.index-wrapper1{
 		float: left;
 		width: 70%;
+
+		.ind-box{
+			height: 500px;
+		}
 
 		.i-img{
 			width: 100%;
