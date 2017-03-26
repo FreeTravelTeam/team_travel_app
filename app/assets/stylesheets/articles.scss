@@ -160,7 +160,8 @@ $fukidasi-cl: #1d1f42;
   transition: all .2s ease-in-out;
 }
 .link-button {
-	margin: 10px;
+	margin: 17px;
+	margin-left: 150px;
 	display: inline-block;
 	text-align: center;
 	text-decoration: none;
@@ -175,7 +176,23 @@ $fukidasi-cl: #1d1f42;
 	transform: scale(1.05);
 }
 
-/*共通フォーム*/
+.navbar-default{
+	width: 100%;
+	position: fixed;
+	z-index: 10;
+}
+
+.third{
+	height: 88px;
+}
+
+.login-user{
+	margin: 0 auto;
+}
+.logout-user{
+	margin: 0 auto;
+}
+/*render.article-form*/
 
 .form-wrapper{
 	width: 75%;
@@ -198,6 +215,9 @@ $fukidasi-cl: #1d1f42;
 	margin: 10px auto;
 }
 
+<<<<<<< HEAD
+//indexページ
+=======
 
 
 /*一覧ページ*/
@@ -214,6 +234,7 @@ $fukidasi-cl: #1d1f42;
 	width: 96%;
 	margin: 20px auto;
 	
+>>>>>>> wantrevert
 
 	.index-wrapper1{
 		float: left;
