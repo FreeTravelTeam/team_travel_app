@@ -16,7 +16,6 @@
 //= require social-share-button
 //= require bootstrap-sprockets
 //= require ckeditor/init
-
 $(function() {
     var topBtn = $('#page-top');    
     topBtn.hide();

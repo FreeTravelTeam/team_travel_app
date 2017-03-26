@@ -6,7 +6,8 @@ class ArticlesController < ApplicationController
 	end
 
 	def index
-		@articles = Article.all.order("id DESC")
+		@articles = Article.all.order("title DESC")
+		@articles = Article.page(params[:page]).per(12)
 		if params[:title].present?
       		@articles = @articles.get_title params[:title]
     	end
@@ -16,7 +17,7 @@ class ArticlesController < ApplicationController
     	if params[:price].present?
       		@articles = @articles.get_price params[:price]
     	end
-		@articles = Article.page(params[:page]).per(12)
+		@new_articles = Article.order("updated_at DESC")
 	end
 
 	def new
