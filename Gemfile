@@ -43,6 +43,8 @@ gem 'font-awesome-rails'
 
 gem 'ckeditor'
 
+gem "redcarpet"
+gem "pygments.rb"
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

@@ -66,16 +66,37 @@
       <hr>
 
       <div class="form-bodyarea">
-        <p>
-          <%= f.cktext_area :body, class: "editor" %>
-        </p>
 
-        <hr>
+        <ul class="nav nav-tabs">
+          <li class="active"><a data-toggle="tab" href="#editor">エディタ</a></li>
+          <li><a data-toggle="tab" href="#mkdown">マークダウン</a></li>
+        </ul>
 
-        <p class="article-submit">
-          <%= f.submit "Submit", class: "btn btn-default" %>
-        </p>
+        <div class="tab-content">
+          <div id="editor" class="tab-pane fade in active">
+            <p>
+              <%= f.cktext_area :body, class: "editor" %>
+            </p>
+
+            <hr>
+
+            <p class="article-submit">
+              <%= f.submit "Submit", class: "btn btn-default" %>
+            </p>
+          </div>
+          <div id="mkdown" class="tab-pane fade">
+            <p>
+              <%= f.text_area :body, as: :pagedown, input_html: { preview: true, rows: 20 }, class: "mk-editor" %>
+            </p>
+
+            <hr>
+
+            <p class="article-submit">
+              <%= f.submit "Submit", class: "btn btn-default" %>
+            </p>
+          </div>
+        </div>
       </div>
-      </section>
-    <% end %>
+    </section>
+  <% end %>
 </div>

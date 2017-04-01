@@ -17,7 +17,7 @@
 			</div>
 			<div class="show_side-info">
 				<span class="infotitle">予算</span>
-				<p><%= @article.price %>円</p>
+				<p><%= @article.price %></p>
 			</div>
 			<div class="show_side-info">
 				<span class="infotitle">日にち</span>
@@ -55,7 +55,7 @@
 				</span>
 				<div class="show_body-body">
 					<p class="body-body">
-					<%= @article.body.html_safe %>
+					<%= markdown(@article.body).html_safe %>
 					</p>
 				</div>
 			</div>
