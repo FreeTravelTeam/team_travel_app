@@ -37,7 +37,7 @@ gem 'devise'
 
 gem 'social-share-button'
 
-gem 'hirb'
+# gem 'hirb'
 # gem 'pry'
 gem 'font-awesome-rails'
 
