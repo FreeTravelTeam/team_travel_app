@@ -27,7 +27,7 @@ class ArticlesController < ApplicationController
 	def create
 		@article = Article.new(set_params)
 		@article.user_id = current_user.id
-		if  
+		if
 			@article.save then
 			redirect_to articles_path
 		else
@@ -46,18 +46,17 @@ class ArticlesController < ApplicationController
 		@article.destroy
 		redirect_to articles_path
 	end
-    
+
     def show
     	user_id = @article.user_id
     	@user = User.find(user_id)
     end
 
     def edit
-    	
     end
 
     def update
-    	if  
+    	if
 			@article.update(set_params) then
 			redirect_to articles_path
 		else
@@ -75,7 +74,7 @@ class ArticlesController < ApplicationController
 	private
 	def set_article
 		@article = Article.find(params[:id])
-		
+
 	end
 	def set_params
 		params.require(:article).permit(:body, :image, :price, :from_date, :to_date, :country, :region, :safety_info, :travel_item, :user_id, :title)
